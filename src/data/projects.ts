@@ -1,13 +1,16 @@
 import { Project, validateProject } from "@/types/project";
-import projectLtiCanvas from "@/assets/project-lti-canvas.jpg";
-import projectResearchPlatform from "@/assets/project-research-platform.jpg";
-import projectEtlPipeline from "@/assets/project-etl-pipeline.jpg";
+import projectLtiCanvas from "@/assets/project-lti-canvas.png";
+import projectLtiCanvas2 from "@/assets/unamed.png";
+import projectResearchPlatform from "@/assets/project-research-platform.png";
+import projectEtlPipeline from "@/assets/project-etl-pipeline.png";
+import projectPapyrusAI from "@/assets/project-papyrusai.png";
+import projectPython2Html from "@/assets/python-webpage-creation.png";
 
 export const projects: Project[] = [
   {
     id: "lti-canvas-integration",
-    title: "LTI 1.3 Canvas Integration",
-    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps.",
+    title: "App Integration with Canvas",
+    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
     employer: "University of California",
     role: "Solo Full-Stack Developer",
     date: "September 2024",
@@ -20,9 +23,9 @@ export const projects: Project[] = [
       { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "LTI 1.3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
     ],
-    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "LTI 1.3"],
+    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
     challenges: [
       "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
       "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
@@ -35,12 +38,12 @@ export const projects: Project[] = [
   },
   {
     id: "research-data-platform",
-    title: "Research Data Collection Platform",
+    title: "RAG + LLM Tester Tool",
     whatItIs: "Multi-tenant platform for psychology researchers to design surveys, collect data, and analyze results with RLS security.",
     employer: "Research Lab",
     role: "Backend Lead",
     date: "June 2024",
-    image: projectResearchPlatform,
+    image: projectLtiCanvas2,
     stackIcons: [
       { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
       { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
@@ -59,13 +62,13 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "serverless-etl-pipeline",
-    title: "Serverless ETL Data Pipeline",
+    id: "papyrusai-data-extraction",
+    title: "PapyrusAI Data Extraction",
     whatItIs: "Automated pipeline ingesting CSV files from S3, transforming records, and loading into DynamoDB for analytics.",
     employer: "Tech Startup",
     role: "Solo Developer",
     date: "March 2024",
-    image: projectEtlPipeline,
+    image: projectPapyrusAI,
     stackIcons: [
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
       { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
@@ -87,7 +90,7 @@ export const projects: Project[] = [
   },
   {
     id: "real-time-analytics-dashboard",
-    title: "Real-Time Analytics Dashboard",
+    title: "Stress Testing Custom APIs",
     whatItIs: "Interactive dashboard displaying live metrics from Kinesis streams with sub-second latency for business intelligence.",
     employer: "Enterprise Corp",
     role: "Frontend Lead",
@@ -113,7 +116,7 @@ export const projects: Project[] = [
   },
   {
     id: "microservices-api-gateway",
-    title: "Microservices API Gateway",
+    title: "User Engagement Analysis",
     whatItIs: "Centralized API gateway routing requests to 15+ microservices with authentication, rate limiting, and caching.",
     employer: "SaaS Company",
     role: "Backend Engineer",
@@ -139,12 +142,12 @@ export const projects: Project[] = [
   },
   {
     id: "ci-cd-automation-pipeline",
-    title: "CI/CD Automation Pipeline",
+    title: "Python Webpage Creation Package",
     whatItIs: "Automated deployment pipeline using GitHub Actions, Docker, and AWS ECS for zero-downtime releases.",
     employer: "Tech Startup",
     role: "DevOps Engineer",
     date: "July 2023",
-    image: projectLtiCanvas,
+    image: projectPython2Html,
     stackIcons: [
       { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
       { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
