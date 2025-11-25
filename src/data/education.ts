@@ -1,6 +1,6 @@
 import { Education } from "@/types/education";
-import logoUCI from "@/assets/logo-uci.jpg";
-import logoMcFarland from "@/assets/logo-mcfarland.jpg";
+import logoUCI from "@/assets/logo-uci.png";
+import logoMcFarland from "@/assets/logo-mcfarland.png";
 import heroUCI from "@/assets/hero-uci.jpg";
 import heroMcFarland from "@/assets/hero-mcfarland.jpg";
 
@@ -14,9 +14,9 @@ export const education: Education[] = [
     location: "Irvine, CA",
     date: "Expected June 2026",
     summary: [
-      "Mathematics Major, Computer Science Minor",
-      "Advanced Coursework: Linear Algebra, Differential Equations, Real Analysis, Algorithms",
-      "Interdisciplinary focus combining mathematical theory with software engineering"
+      "Bachelor of Science in Mathematics",
+      "Co-author of 2025 peer-reviewed article in \"Computer Science Education (Vol. 35, Issue 4)\"",
+      "Advanced Coursework: Linear Algebra, Differential Equations, Abstract Algebra, Algorithms & Data Structures",
     ],
     details: [
       {

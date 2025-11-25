@@ -39,13 +39,13 @@ const About = () => {
               </a>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <a href="https://linkedin.com/in/gerardolopez" target="_blank" rel="noopener noreferrer">
+              <a href="www.linkedin.com/in/gerryjr" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <a href="mailto:hello@gerardolopez.dev">
+              <a href="mailto:gerardolopezjr1178@gmail.com">
                 <Mail className="mr-2 h-5 w-5" />
                 Email
               </a>

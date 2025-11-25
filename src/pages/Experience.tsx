@@ -113,12 +113,12 @@ const Experience = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="px-8 pb-6 animate-fade-in">
-                <img 
+                {/* <img 
                   src={work.hero} 
                   alt={work.company} 
                   className="w-full h-48 md:h-64 object-cover rounded-lg mb-6"
                   loading="eager"
-                />
+                /> */}
                 <div className="space-y-6 text-lg">
                   {work.details.map((detail, idx) => (
                     <div key={idx}>

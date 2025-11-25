@@ -3,7 +3,7 @@ import { Certification } from "@/types/certification";
 export const certifications: Certification[] = [
   {
     title: "AWS Cloud Practitioner",
-    date: "Expected July 2025",
+    date: "Expected Jan 2026",
     keyPoints: [
       "Foundational AWS Concepts",
       "Best Practices, Core Services",

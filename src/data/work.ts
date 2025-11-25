@@ -1,12 +1,18 @@
 import { WorkExperience } from "@/types/work";
-import logoDLL from "@/assets/logo-dll.jpg";
-import logoCPLeads from "@/assets/logo-cpleads.jpg";
+import logoDLL from "@/assets/logo-dll.png";
+import logoCPLeads from "@/assets/logo-cpleads.png";
 import logoCodeAI from "@/assets/logo-codeai.jpg";
-import logoTutor from "@/assets/logo-tutor.jpg";
-import heroDLL from "@/assets/hero-dll.jpg";
-import heroCPLeads from "@/assets/hero-cpleads.jpg";
-import heroCodeAI from "@/assets/hero-codeai.jpg";
-import heroTutor from "@/assets/hero-tutor.jpg";
+import logoTutor from "@/assets/logo-tutor.png";
+// import heroDLL from "@/assets/hero-dll.jpg";
+// import heroCPLeads from "@/assets/hero-cpleads.jpg";
+// import heroCodeAI from "@/assets/hero-codeai.jpg";
+// import heroTutor from "@/assets/hero-tutor.jpg";
+
+// Placeholder for images images 
+var heroDLL: any;
+var heroCPLeads: any;
+var heroCodeAI: any;
+var heroTutor: any;
 
 export const workExperience: WorkExperience[] = [
   {

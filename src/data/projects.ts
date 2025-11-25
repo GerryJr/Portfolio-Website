@@ -4,7 +4,10 @@ import projectLtiCanvas2 from "@/assets/unamed.png";
 import projectResearchPlatform from "@/assets/project-research-platform.png";
 import projectEtlPipeline from "@/assets/project-etl-pipeline.png";
 import projectPapyrusAI from "@/assets/project-papyrusai.png";
-import projectPython2Html from "@/assets/python-webpage-creation.png";
+import projectPython2Html from "@/assets/project-webpage-creation.png";
+import projectStorageTracker from "@/assets/project-sortage-tracker.png";
+import porjectMortgageTracker from "@/assets/project-mortgage.png"
+import porjectOrangeCalc from "@/assets/project-orange-calc.png"
 
 export const projects: Project[] = [
   {
@@ -15,6 +18,35 @@ export const projects: Project[] = [
     role: "Solo Full-Stack Developer",
     date: "September 2024",
     image: projectLtiCanvas,
+    stackIcons: [
+      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
+      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
+      { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
+      { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    ],
+    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
+    challenges: [
+      "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
+      "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
+    ],
+    impact: "Enabled 2,000+ students to access personalized learning content seamlessly across 15 courses.",
+    links: {
+      live: "https://example.com/lti-demo",
+      repo: "https://github.com/gerryjr/lti-canvas",
+    },
+  },
+  {
+    id: "storage-tracker",
+    title: "Custom Warehouse Management System",
+    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
+    employer: "University of California",
+    role: "Solo Full-Stack Developer",
+    date: "September 2024",
+    image: projectStorageTracker,
     stackIcons: [
       { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
       { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
@@ -115,6 +147,35 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "mortage-tracker",
+    title: "Multi-Mortage Tracker",
+    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
+    employer: "University of California",
+    role: "Solo Full-Stack Developer",
+    date: "September 2024",
+    image: porjectMortgageTracker,
+    stackIcons: [
+      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
+      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
+      { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
+      { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    ],
+    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
+    challenges: [
+      "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
+      "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
+    ],
+    impact: "Enabled 2,000+ students to access personalized learning content seamlessly across 15 courses.",
+    links: {
+      live: "https://example.com/lti-demo",
+      repo: "https://github.com/gerryjr/lti-canvas",
+    },
+  },
+  {
     id: "microservices-api-gateway",
     title: "User Engagement Analysis",
     whatItIs: "Centralized API gateway routing requests to 15+ microservices with authentication, rate limiting, and caching.",
@@ -163,6 +224,35 @@ export const projects: Project[] = [
     impact: "Enabled 5 daily deployments with automated rollback, increasing team velocity by 300%.",
     links: {
       repo: "https://github.com/gerryjr/ci-cd-pipeline",
+    },
+  },
+  {
+    id: "orange-calculator",
+    title: "Orange Calculator",
+    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
+    employer: "University of California",
+    role: "Solo Full-Stack Developer",
+    date: "September 2024",
+    image: porjectOrangeCalc,
+    stackIcons: [
+      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
+      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
+      { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
+      { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
+      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    ],
+    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
+    challenges: [
+      "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
+      "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
+    ],
+    impact: "Enabled 2,000+ students to access personalized learning content seamlessly across 15 courses.",
+    links: {
+      live: "https://example.com/lti-demo",
+      repo: "https://github.com/gerryjr/lti-canvas",
     },
   },
 ];
