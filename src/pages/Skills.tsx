@@ -14,10 +14,15 @@ const Skills = () => {
         
         <div className="space-y-12">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="text-2xl font-semibold mb-6 text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'languages' ? null : 'languages')}>
-              Programming Languages
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'languages' ? 'rotate-180' : ''}`} />
-            </h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'languages' ? null : 'languages')}>
+                Programming Languages
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'languages' ? 'rotate-180' : ''}`} />
+              </h2>
+              <span className={`ml-4 text-base text-muted-foreground font-light transition-opacity duration-200 ${expandedCategory === 'languages' ? 'opacity-100' : 'opacity-0'}`}>
+                Years of Active Usage
+              </span>
+            </div>
             <div className="flex flex-wrap gap-8">
               {skills.languages.map(skill => <div key={skill.name} className="flex flex-col items-center gap-1 group">
                   <TechIcon name={skill.name} icon={skill.icon} size={32} />
@@ -32,10 +37,15 @@ const Skills = () => {
           </div>
 
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="text-2xl font-semibold mb-6 text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'frameworks' ? null : 'frameworks')}>
-              Frameworks & Libraries
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'frameworks' ? 'rotate-180' : ''}`} />
-            </h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'frameworks' ? null : 'frameworks')}>
+                Frameworks & Libraries
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'frameworks' ? 'rotate-180' : ''}`} />
+              </h2>
+              <span className={`ml-4 text-base text-muted-foreground font-light transition-opacity duration-200 ${expandedCategory === 'frameworks' ? 'opacity-100' : 'opacity-0'}`}>
+                Years of Active Usage
+              </span>
+            </div>
             <div className="flex flex-wrap gap-8">
               {skills.frameworks.map(skill => <div key={skill.name} className="flex flex-col items-center gap-1 group">
                   <TechIcon name={skill.name} icon={skill.icon} size={32} />
@@ -50,10 +60,15 @@ const Skills = () => {
           </div>
 
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="text-2xl font-semibold mb-6 text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'cloud' ? null : 'cloud')}>
-              Cloud Platforms
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'cloud' ? 'rotate-180' : ''}`} />
-            </h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'cloud' ? null : 'cloud')}>
+                Cloud Platforms
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'cloud' ? 'rotate-180' : ''}`} />
+              </h2>
+              <span className={`ml-4 text-base text-muted-foreground font-light transition-opacity duration-200 ${expandedCategory === 'cloud' ? 'opacity-100' : 'opacity-0'}`}>
+                Years of Active Usage
+              </span>
+            </div>
             <div className="flex flex-wrap gap-8">
               {skills.cloud.map(skill => <div key={skill.name} className="flex flex-col items-center gap-1 group">
                   <TechIcon name={skill.name} icon={skill.icon} size={32} />
@@ -68,10 +83,15 @@ const Skills = () => {
           </div>
 
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="text-2xl font-semibold mb-6 text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'tools' ? null : 'tools')}>
-              Developer Tools
-              <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'tools' ? 'rotate-180' : ''}`} />
-            </h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-semibold text-accent flex items-center gap-2 cursor-pointer hover:text-accent/80 transition-colors" onClick={() => setExpandedCategory(expandedCategory === 'tools' ? null : 'tools')}>
+                Developer Tools
+                <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${expandedCategory === 'tools' ? 'rotate-180' : ''}`} />
+              </h2>
+              <span className={`ml-4 text-base text-muted-foreground font-light transition-opacity duration-200 ${expandedCategory === 'tools' ? 'opacity-100' : 'opacity-0'}`}>
+                Years of Active Usage
+              </span>
+            </div>
             <div className="flex flex-wrap gap-8">
               {skills.tools.map(skill => <div key={skill.name} className="flex flex-col items-center gap-1 group">
                   <TechIcon name={skill.name} icon={skill.icon} size={32} />

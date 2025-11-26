@@ -24,22 +24,25 @@ export const workExperience: WorkExperience[] = [
     location: "Irvine, CA",
     dateRange: "Jan 2024 – Present",
     summary: [
-      "RAG Testing Platform for AI model evaluation",
-      "Cost Optimization reducing data extraction costs by 60%",
-      "LTI 1.3 Integration connecting PapyrusAI to Canvas LMS"
+      "Connected PapyrusAI to Canvas via secure LTI 1.3 integration used across school districts.",
+      "Built an internal RAG + LLM testing tool that scaled AI experiments across dozens of models.",
+      "Automated PapyrusAI data exports, turning 30-minute manual pulls into seconds-fast CSV downloads."
     ],
     details: [
       {
-        title: "RAG Testing Platform for AI Model Evaluation",
-        description: "Architected and developed a comprehensive Retrieval-Augmented Generation testing platform using React, TypeScript, and AWS Lambda for serverless backend processing. The platform enables researchers to evaluate AI models with real-time data extraction and analysis capabilities, providing powerful tools to assess model performance, accuracy, and reliability in production-like environments."
+        title: "Canvas LTI 1.3 Integration for PapyrusAI",
+        description:
+          "Implemented a secure LTI 1.3 integration between PapyrusAI and Canvas using AWS Lambda, Cognito, and multi-tenant DynamoDB. This enabled districts to roll out PapyrusAI inside Canvas with isolated data and minimal extra engineering per institution."
       },
       {
-        title: "Cost Optimization Reducing Costs by 60%",
-        description: "Implemented highly efficient AWS Lambda functions and optimized data pipelines through strategic use of Lambda layers, intelligent caching mechanisms, and optimized API calls. This cost reduction enabled the lab to scale their research operations significantly without proportional budget increases, while maintaining high performance and reliability."
+        title: "RAG + LLM Tester Platform for Researchers",
+        description:
+          "Designed an internal tester that runs thousands of prompts across 40+ LLMs in one workflow, backed by AWS Lambda and API Gateway. Standardized distinct model APIs and added optional vector-database RAG so researchers could quickly compare models and export results."
       },
       {
-        title: "LTI 1.3 Integration Connecting PapyrusAI to Canvas LMS",
-        description: "Successfully integrated PapyrusAI into Canvas Learning Management System using the Learning Tools Interoperability (LTI) 1.3 standard, enabling seamless AI-powered educational tools for thousands of students. Implemented secure OAuth 2.0 authentication flows, deep linking capabilities, and grade passback functionality, allowing students to access advanced AI tutoring directly within their Canvas courses."
+        title: "High-Volume PapyrusAI Data Export Pipeline",
+        description:
+          "Built a serverless Python+pandas pipeline that joins multiple PapyrusAI DynamoDB tables into filtered CSVs on demand. Admins and researchers now get analysis-ready exports over millions of messages in seconds instead of 30+ minutes of manual querying."
       }
     ],
     technologies: [
@@ -61,22 +64,25 @@ export const workExperience: WorkExperience[] = [
     location: "Irvine, CA",
     dateRange: "Jan 2024 – Nov 2024",
     summary: [
-      "User Behavior Analysis identifying key engagement patterns",
-      "Natural Language Processing with Topic Modeling & Sentiment Analysis",
-      "Data Visualization dashboards in R using ggplot2"
+      "Analyzed user behavior data to uncover how people engaged with AI-supported tools.",
+      "Applied sentiment analysis and topic modeling to thousands of messages to surface key themes.",
+      "Created R visualizations that turned complex datasets into figures used in talks and publications."
     ],
     details: [
       {
-        title: "User Behavior Analysis Identifying Key Engagement Patterns",
-        description: "Conducted comprehensive analysis of user engagement across the CP-LEADS platform, examining login frequencies, session durations, content interaction rates, and feature utilization. Utilized advanced statistical methods including cohort analysis, retention modeling, and funnel analysis to identify key trends. Findings directly informed product development priorities and user experience enhancements, resulting in measurable improvements in user satisfaction metrics."
+        title: "Behavior and Usage Analysis",
+        description:
+          "Cleaned and analyzed platform usage logs with Python and pandas to quantify logins, activity patterns, and feature use over time. These findings guided which experiences to study more deeply and which product directions were worth investing in."
       },
       {
-        title: "Natural Language Processing with Topic Modeling & Sentiment Analysis",
-        description: "Applied sophisticated Topic Modeling techniques (Latent Dirichlet Allocation) and Sentiment Analysis to understand user feedback and content themes at scale. Processed thousands of user comments, survey responses, and support tickets to extract meaningful patterns and emotional sentiment. These insights provided actionable intelligence for content strategy optimization, identifying which topics resonated most with users and helped shape content creation guidelines used by the content team."
+        title: "NLP on User Messages: Sentiment and Topic Modeling",
+        description:
+          "Ran sentiment analysis and topic modeling in Python and R on thousands of anonymized user messages. The results highlighted what users were trying to do with AI, where they struggled, and which types of interactions aligned with healthy learning behaviors."
       },
       {
-        title: "Data Visualization Dashboards in R using ggplot2",
-        description: "Created comprehensive interactive dashboards and static reports in R using ggplot2, plotly, and shiny libraries. Transformed complex datasets into intuitive visual narratives that made sophisticated analysis accessible to non-technical stakeholders. Dashboards included real-time metrics tracking, trend analysis, comparative visualizations, and predictive forecasting models, becoming essential resources for executive decision-making and strategic planning sessions."
+        title: "R Reporting and Visualizations for Researchers",
+        description:
+          "Produced R-based tables and plots that combined behavioral metrics with NLP outputs in a digestible format. These visuals were used in CP-LEADS presentations and manuscripts, helping non-technical collaborators quickly understand the data and act on it."
       }
     ],
     technologies: [
@@ -98,22 +104,25 @@ export const workExperience: WorkExperience[] = [
     location: "Remote",
     dateRange: "Jun 2023 – Sep 2023",
     summary: [
-      "Team Leadership for Python-based web generator development",
-      "Quality Assurance achieving 85% test coverage",
-      "API Automation for Google Colab notebooks reducing manual effort by 70%"
+      "Created a Python package that generated full HTML sites from notebook-style code.",
+      "Integrated Google Drive API to automatically save user projects from Google Colab.",
+      "Improved internal tooling reliability and reduced manual steps for developers and users."
     ],
     details: [
       {
-        title: "Team Leadership for Python-Based Web Generator Development",
-        description: "Led a cross-functional team of 4 developers in building a sophisticated Python-based web generator tool using Flask framework. Coordinated bi-weekly sprints following Agile methodologies, facilitated daily standups, and conducted thorough code reviews. Managed project timelines using Jira and mentored junior developers on Python best practices and design patterns, successfully delivering the project 2 weeks ahead of schedule."
+        title: "Python Webpage Creation Package",
+        description:
+          "Built a Python library that converts structured Python code into HTML pages so users could build simple sites without touching traditional frontend stacks. This made it easier for instructors and learners to ship web-based examples directly from code."
       },
       {
-        title: "Quality Assurance Achieving 85% Test Coverage",
-        description: "Developed and implemented a comprehensive testing strategy using pytest and unittest frameworks, improving code coverage from 45% to over 85%. Created unit tests, integration tests, and end-to-end test suites that significantly reduced production bugs. Introduced automated testing pipelines in CI/CD workflows using GitHub Actions, and this testing infrastructure became the standard for all subsequent projects at CodeAI."
+        title: "Google Colab and Drive API Automation",
+        description:
+          "Added Google Colab and Drive API integration so notebook projects were automatically saved and versioned. This automation reduced lost work, simplified review for instructors, and cut down on support around file management."
       },
       {
-        title: "API Automation for Google Colab Notebooks Reducing Manual Effort by 70%",
-        description: "Designed and implemented an automated system for collecting and processing Google Colab notebooks via their API, streamlining the previously manual workflow. Built robust error handling, retry mechanisms, and logging systems to ensure reliable operation at scale. The automation system processed over 1,000 notebooks weekly, extracting code patterns, dependencies, and execution results, freeing up significant team resources for more strategic development initiatives."
+        title: "Streamlined Tooling and Reduced Manual Effort",
+        description:
+          "Packaged the library and scripts into a reusable workflow that others at CodeAI could adopt with minimal setup. Turning a multi-step process into a single pipeline reduced setup time for new teaching materials and internal demos."
       }
     ],
     technologies: [
@@ -143,15 +152,18 @@ export const workExperience: WorkExperience[] = [
     details: [
       {
         title: "Personalized 1-on-1 Instruction Tailored to Individual Learning Styles",
-        description: "Provided individualized Python tutoring to UCI undergraduate students, adapting teaching methods and pace to match each student's unique learning style, background, and goals. Developed custom lesson plans that addressed specific knowledge gaps while building on existing strengths. Utilized various teaching techniques including visual aids, hands-on coding exercises, and conceptual explanations. Students consistently reported grade improvements of one full letter grade or more, with several achieving perfect scores on their Python programming courses."
+        description:
+          "Provided individualized Python tutoring to UCI undergraduate students, adapting teaching methods and pace to match each student's unique learning style, background, and goals. Developed custom lesson plans that addressed specific knowledge gaps while building on existing strengths."
       },
       {
         title: "Comprehensive Python Curriculum Covering Fundamentals to Advanced Topics",
-        description: "Taught complete Python fundamentals including data types, control structures, functions, and object-oriented programming principles. Advanced topics included file I/O operations, API integration, data manipulation with pandas and numpy, web scraping with BeautifulSoup, and web development with Flask. Also introduced students to essential development tools including Git version control, debugging techniques with pdb, virtual environments, and writing clean, maintainable code following PEP 8 style guidelines."
+        description:
+          "Taught core Python fundamentals such as data types, control structures, functions, and object-oriented programming, along with more advanced lessons including file I/O, API integration, pandas and numpy for data work, web scraping with BeautifulSoup, and Git/GitHub usage."
       },
       {
-        title: "Practical Application Focus with Real-World Projects and Problem-Solving",
-        description: "Emphasized real-world application of programming concepts through hands-on projects that mirrored actual software development scenarios. Students built portfolio-worthy projects including web scrapers, data analysis tools, simple games, and RESTful APIs. Each project incorporated industry-standard practices such as proper documentation, error handling, and code testing. This practical approach prepared students for technical interviews and professional software development roles, with several students securing internships directly as a result of skills gained during tutoring sessions."
+        title: "Practical Application with Real-World Projects",
+        description:
+          "Supported students in building real projects by showing them how to break problems down, stay organized, and work through challenges confidently."
       }
     ],
     technologies: [

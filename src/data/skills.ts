@@ -9,12 +9,12 @@ export const skills: SkillCategory = {
     },
     {
       name: "TypeScript",
-      years: 3,
+      years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
     },
     {
       name: "R",
-      years: 3,
+      years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
     },
     {
@@ -40,30 +40,35 @@ export const skills: SkillCategory = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
     },
     {
-      name: "Flask",
-      years: 4,
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
-    },
-    {
       name: "Pandas",
-      years: 5,
+      years: 4,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
     },
     {
       name: "NumPy",
-      years: 5,
+      years: 4,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
     },
     {
-      name: "SQLAlchemy",
-      years: 3,
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg"
+      name: "Expo",
+      years: 1,
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg"
     },
     {
       name: "Bootstrap",
       years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-    }
+    },
+    {
+      name: "SQLAlchemy",
+      years: 1,
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg"
+    },
+    {
+      name: "Flask",
+      years: 1,
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+    },
   ],
   cloud: [
     {
@@ -80,7 +85,12 @@ export const skills: SkillCategory = {
       name: "MongoDB",
       years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-    }
+    },
+    {
+      name: "Supabase",
+      years: 1,
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+    },
   ],
   tools: [
     {
@@ -89,13 +99,18 @@ export const skills: SkillCategory = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
     },
     {
+      name: "VS Code",
+      years: 1,
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+    },
+    {
       name: "Jupyter",
-      years: 5,
+      years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
     },
     {
       name: "RStudio",
-      years: 3,
+      years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg"
     },
     {
