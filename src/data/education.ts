@@ -16,20 +16,20 @@ export const education: Education[] = [
     summary: [
       "Bachelor of Science in Mathematics",
       "Co-author of 2025 peer-reviewed article in \"Computer Science Education (Vol. 35, Issue 4)\"",
-      "Advanced Coursework: Linear Algebra, Differential Equations, Abstract Algebra, Algorithms & Data Structures",
+      "Worked closely with UCI faculty on research across STEM subjects",
     ],
     details: [
       {
-        title: "Mathematics Major, Computer Science Minor",
-        description: "Completed comprehensive coursework including Linear Algebra, Differential Equations, Real Analysis, Data Structures, Algorithms, and Software Engineering. This rigorous interdisciplinary education combines advanced mathematical theory with practical computer science applications, enabling deep analytical thinking paired with technical implementation skills."
+        title: "Bachelor of Science in Mathematics",
+        description: "Relative Courseork: Algorithms & Data Structures, Optimization, Statistical Modeling, Linear Algebra, Differential Equations, Abstract Algebra"
       },
       {
-        title: "Advanced Coursework & Technical Foundation",
-        description: "Focus on computational methods and statistical modeling provides a strong foundation for solving complex technical problems. Developed expertise in applying mathematical principles to real-world software engineering challenges through project-based learning and research opportunities."
+        title: "Co-Author of 2025 Peer-Reviewed Article",
+        description: "Contributed to research analytics published in the prestigious journal \"Computer Science Education (Vol. 35, Issue 4)\" in the article titled \"Empowering Latine elementary school students with disabilities: computer programming through culturally sustaining curriculum\"."
       },
       {
-        title: "Interdisciplinary Problem-Solving Approach",
-        description: "This cross-disciplinary perspective enhances ability to design efficient algorithms, optimize systems, and create innovative technical solutions. The unique combination of mathematics and computer science coursework enables a holistic approach to solving complex computational challenges."
+        title: "Worked closely with UCI faculty on research",
+        description: "Collaborated with Professors in UCI by assisting in data collection, analysis, and interpretation across various STEM subjects as an undergraduate research assistant. Gained hands-on experience in experimental design, statistical analysis, and academic writing."
       }
     ]
   },
@@ -42,22 +42,22 @@ export const education: Education[] = [
     location: "McFarland, CA",
     date: "June 2020",
     summary: [
-      "Graduated with Highest Honors (4.0+ GPA)",
-      "Advanced STEM coursework in mathematics and sciences",
-      "Valedictorian preparation and academic excellence"
+      "Highest Honors Recipient",
+      "Mathematics Medallion Recipient",
+      "Future Farmers of America Officer",
     ],
     details: [
       {
-        title: "Graduated with Highest Honors (4.0+ GPA)",
-        description: "Maintained a GPA above 4.0 throughout all four years of high school, demonstrating exceptional dedication and consistent academic excellence across all subject areas. This achievement reflected strong work ethic, disciplined time management, and commitment to educational pursuits."
+        title: "Graduated with Highest Honors",
+        description: "Maintained a GPA above 4.0 throughout all four years of high school, demonstrating exceptional dedication and consistent academic excellence across all subject areas."
       },
       {
-        title: "Advanced STEM Coursework",
-        description: "Completed rigorous advanced placement courses in mathematics and sciences, building a comprehensive foundation in analytical thinking and problem-solving methodologies. This early exposure to higher-level STEM concepts established the groundwork for pursuing technical education at the university level."
+        title: "Mathematics Medallion Recipient",
+        description: "Only student in the graduating class to receive the Mathematics Medallion, awarded for outstanding performance and dedication in advanced mathematics coursework."
       },
       {
-        title: "Valedictorian Preparation and Academic Excellence",
-        description: "Cultivated a genuine passion for STEM education and computational thinking during formative years. This early enthusiasm evolved into a commitment to pursuing higher education and a career in technology and mathematics, setting the foundation for future academic and professional success."
+        title: "Future Farmers of America (FFA) Officer",
+        description: "While most clubs and extracurriculars are forgotten after graduation, I was an FFA member/officer for all 4 years of higheschool. While I wasn't the most pationate about farms, it taught me leadership skills that I still use today. Also, I now know a disturbing amount of plants, seeds, and insects for being a non-farmer :)"
       }
     ]
   }

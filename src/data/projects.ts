@@ -215,7 +215,7 @@ export const projects: Project[] = [
     id: "orange-calculator",
     title: "Mandarin Calculator",
     whatItIs: "A Streamlit web app built in Python that automates mandarin-production calculations for employees, replacing manual math with a simple interactive interface.",
-    employer: "University of California",
+    employer: "",
     role: "Solo Developer",
     date: "Jun 2022 - Jan 2023",
     image: porjectOrangeCalc,
