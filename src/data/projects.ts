@@ -1,6 +1,6 @@
 import { Project, validateProject } from "@/types/project";
+import projectLLMTester from "@/assets/project-tester-tool.png";
 import projectLtiCanvas from "@/assets/project-lti-canvas.png";
-import projectLtiCanvas2 from "@/assets/unamed.png";
 import projectResearchPlatform from "@/assets/project-research-platform.png";
 import projectEtlPipeline from "@/assets/project-etl-pipeline.png";
 import projectPapyrusAI from "@/assets/project-papyrusai.png";
@@ -9,250 +9,228 @@ import projectStorageTracker from "@/assets/project-sortage-tracker.png";
 import porjectMortgageTracker from "@/assets/project-mortgage.png"
 import porjectOrangeCalc from "@/assets/project-orange-calc.png"
 
+const iconAWS = { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" }
+const iconLambda = { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" }
+const iconDynamoDB = { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" }
+const iconCognito = { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" }
+const iconGateway = { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" }
+const iconDocker = { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"}
+const iconReact = { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" }
+const iconTS = { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" }
+const iconHTML = { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" }
+const iconExpo = { name: "Expo", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg" }
+const iconSupabase = { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" }
+const iconNodeJS = { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
+const iconS3 = { name: "S3", icon: "https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg" }
+const iconBedrock = { name: "Bedrock", icon: "https://www.awsicon.com/static/images/Service-Icons/Artificial-Intelligence/16/svg/Bedrock.svg" }
+const iconCDK = { name: "CDK", icon: "https://www.awsicon.com/static/images/Service-Icons/Developer-Tools/16/svg/Cloud-Development-Kit.svg" }
+const iconPython = { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" }
+const iconCloudWatch = { name: "CloudWatch", icon: "https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" }
+const iconPostman = { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" }
+const iconPandas = { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" }
+const iconMongoDB = { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" }
+const iconGoogleCloud = { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" }
+const iconR = { name: "R", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg" }
+const iconKubernetes = { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" }
+const iconJWT = { name: "JWT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" }
+const iconExpress = { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" }
+const iconRedis = { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" }
+const iconGithub = { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" }
+const iconTerraform = { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" }
+const iconGoogleAPI = { name: "Drive API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" }
+const iconGoogleColab = { name: "Google Colab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg" }
+const iconStreamlit = { name: "Streamlit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" }
+
+
 export const projects: Project[] = [
   {
     id: "lti-canvas-integration",
-    title: "App Integration with Canvas",
-    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
-    employer: "University of California",
-    role: "Solo Full-Stack Developer",
-    date: "September 2024",
+    title: "Website Integration with Canvas",
+    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational app using LTI 1.3 handshake.",
+    employer: "Digital Learning Lab",
+    role: "AWS Full Stack Developer",
+    date: "Jun 2025 - Present",
     image: projectLtiCanvas,
     stackIcons: [
-      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
-      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
-      { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
-      { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      iconAWS, iconTS, iconCDK, iconLambda, iconDynamoDB, iconCognito, iconGateway, iconCloudWatch, iconPostman, iconDocker, iconReact, iconHTML
     ],
-    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
     challenges: [
-      "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
-      "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
+      "Coordinated with an external contractor to deliver a secure, compliant LTI 1.3 integration.",
+      "Built multi-tenant data isolation in DynamoDB using Lambda functions across multiple institutions.",
+      "Created unified Canvas launch and authentication flows using API Gateway and Cognito in TypeScript.",
     ],
-    impact: "Enabled 2,000+ students to access personalized learning content seamlessly across 15 courses.",
+    impact: "Enabled 10,000+ students to access personalized learning content seamlessly across different school districts.",
     links: {
-      live: "https://example.com/lti-demo",
-      repo: "https://github.com/gerryjr/lti-canvas",
+      private: "Work Repo"
     },
   },
   {
-    id: "storage-tracker",
+    id: "custom-wms",
     title: "Custom Warehouse Management System",
-    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
-    employer: "University of California",
-    role: "Solo Full-Stack Developer",
-    date: "September 2024",
+    whatItIs: "Commissioned web and mobile system for a Virginia warehouse, enabling NFC item tracking and admin control.",
+    employer: "",
+    role: "Solo Developer",
+    date: "Aug 2025 - Present",
     image: projectStorageTracker,
     stackIcons: [
-      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
-      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
-      { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
-      { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      iconExpo, iconSupabase, iconReact, iconTS, iconHTML,
     ],
-    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
     challenges: [
-      "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
-      "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
+      "Built real-time inventory syncing with Supabase for scans, NFC events, and updates.",
+      "Developed offline-ready Expo and React interfaces using fast TypeScript workflows.",
+      "Implemented secure role access and event logging using Supabase policies.",
     ],
-    impact: "Enabled 2,000+ students to access personalized learning content seamlessly across 15 courses.",
+    impact: "Accelerated warehouse operations and improved accuracy with unified mobile scanning and web-based admin tools.",
     links: {
-      live: "https://example.com/lti-demo",
-      repo: "https://github.com/gerryjr/lti-canvas",
+      private: "Under Development"
     },
   },
   {
     id: "research-data-platform",
     title: "RAG + LLM Tester Tool",
-    whatItIs: "Multi-tenant platform for psychology researchers to design surveys, collect data, and analyze results with RLS security.",
-    employer: "Research Lab",
-    role: "Backend Lead",
-    date: "June 2024",
-    image: projectLtiCanvas2,
+    whatItIs: "An internal research platform enabling large-scale testing of 5,000+ of prompts across 40+ LLMs, with Retrieval-Augmented Generation (RAG) as an add-on.",
+    employer: "Digital Learning Lab",
+    role: "AWS Full-Stack Developer",
+    date: "Jul 2024 - May 2025",
+    image: projectLLMTester,
     stackIcons: [
-      { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
-      { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      iconAWS, iconPython, iconTS, iconCDK, iconS3, iconLambda, iconBedrock, iconPostman, iconGateway, iconCloudWatch, iconCognito, iconDocker, iconReact, iconHTML
     ],
-    stackText: ["Supabase", "PostgreSQL", "React", "TypeScript", "Node.js"],
     challenges: [
-      "Designed RLS policies isolating participant data across 50+ research projects with zero leaks.",
-      "Optimized query performance reducing dashboard load time from 8s to 1.2s via indexed views.",
+      "Independently architected a scalable AWS backend using CDK for fast, trackable development.",
+      "Managed high-volume data flow, returning structured outputs to the frontend for researcher analysis.",
+      "Integrated a vector database and unified diverse LLM APIs into one consistent RAG-enabled testing workflow.",
     ],
-    impact: "Supported 12 active research studies collecting 50,000+ data points with HIPAA-compliant storage.",
+    impact: "Enabled researchers to run thousands of RAG-enhanced LLM tests at scale, accelerating model evaluation across many changing AI systems.",
     links: {
-      demo: "https://example.com/research-demo",
+      private: "Work Repo",
     },
   },
   {
     id: "papyrusai-data-extraction",
     title: "PapyrusAI Data Extraction",
-    whatItIs: "Automated pipeline ingesting CSV files from S3, transforming records, and loading into DynamoDB for analytics.",
-    employer: "Tech Startup",
-    role: "Solo Developer",
-    date: "March 2024",
+    whatItIs: "A data extraction pipeline that optimizes for DynamoDB tables into downloadable CSVs, aggregating millions of messages for analysis.",
+    employer: "Digital Learning Lab",
+    role: "AWS Full-Stack Developer",
+    date: "Mar 2024 - Jun 2024",
     image: projectPapyrusAI,
     stackIcons: [
-      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
-      { name: "S3", icon: "https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg" },
-      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
-      { name: "CloudWatch", icon: "https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" },
-      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      iconAWS, iconPython, iconPandas, iconCDK, iconLambda, iconDynamoDB, iconPostman, iconGateway, iconCloudWatch
     ],
-    stackText: ["AWS", "Lambda", "S3", "DynamoDB", "CloudWatch", "Node.js", "TypeScript"],
     challenges: [
-      "Implemented idempotent batch processing with DLQ retry logic handling 10K records/hour.",
-      "Set up CloudWatch alarms with SNS notifications reducing incident response time to under 5 min.",
+      "First time building CDK infrastructure to allow multiple developers to deploy Lambda services safely to production.",
+      "Processed millions of DynamoDB records using Python and Pandas with batched reads, pagination, and CloudWatch-guided performance tuning.",
+      "Implemented org-level admin access and filtering through API Gateway + Cognito, validating flows with Postman.",
     ],
-    impact: "Automated manual data entry saving 15 hours/week for operations team across 3 departments.",
+    impact: "Automated a 30-minute multi-table extraction process into a seconds-fast export pipeline powered by AWS Lambda.",
     links: {
-      repo: "https://github.com/gerryjr/serverless-etl",
+      live: "https://www.digitallearninglab.org/papyrusai.html",
     },
   },
   {
     id: "real-time-analytics-dashboard",
     title: "Stress Testing Custom APIs",
-    whatItIs: "Interactive dashboard displaying live metrics from Kinesis streams with sub-second latency for business intelligence.",
-    employer: "Enterprise Corp",
-    role: "Frontend Lead",
-    date: "January 2024",
+    whatItIs: "A Python-driven load testing pipeline that ran smoke, stress, spike, and soak tests on AWS APIs, with R used to graph performance metrics and bottlenecks.",
+    employer: "Digital Learning Lab",
+    role: "AWS Full Stack Developer",
+    date: "Jan 2024 - Feb 2024",
     image: projectEtlPipeline,
     stackIcons: [
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "Kinesis", icon: "https://icon.icepanel.io/AWS/svg/Analytics/Kinesis.svg" },
-      { name: "WebSocket", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" },
-      { name: "D3.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" },
+      iconPython, iconPandas, iconPostman, iconR, iconGateway, iconCloudWatch
     ],
-    stackText: ["React", "TypeScript", "AWS", "Kinesis", "WebSocket", "D3.js"],
     challenges: [
-      "Optimized WebSocket connection pooling reducing server costs by 40% while maintaining real-time updates.",
-      "Implemented virtualized rendering for 100K+ data points with smooth 60fps performance.",
+      "Developed async Python stress tests that emulated real-world concurrency against AWS API endpoints and related services.",
+      "Captured and stored detailed latency and throughput data across thousands of test requests.",
+      "Used R to graph performance trends and identify API bottlenecks under varying load sizes.",
     ],
-    impact: "Provided real-time insights to 500+ business analysts reducing report generation time from hours to seconds.",
+    impact: "Revealed critical API bottlenecks and thresholds that improved system stability under high load, enabling informed developmental decisions.",
     links: {
-      demo: "https://example.com/analytics-demo",
+      private: "Work Repo",
     },
   },
   {
     id: "mortage-tracker",
     title: "Multi-Mortage Tracker",
-    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
-    employer: "University of California",
-    role: "Solo Full-Stack Developer",
-    date: "September 2024",
+    whatItIs: "A Google Cloud–hosted web app built with React + TypeScript, Python, and MongoDB to track multiple mortgages and share real-time payment status between co-owners.",
+    employer: "",
+    role: "Solo Developer",
+    date: "Oct 2023 - Feb 2024",
     image: porjectMortgageTracker,
     stackIcons: [
-      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
-      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
-      { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
-      { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      iconGoogleCloud, iconPython, iconMongoDB, iconReact, iconTS, iconHTML
     ],
-    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
     challenges: [
-      "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
-      "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
+      "Designed a MongoDB schema to support multiple mortgages per user while safely sharing views with co-owners.",
+      "Built Python backend services on Google Cloud to compute amortization, remaining balance, and payment projections.",
+      "Developed a React + TypeScript + HTML frontend that surfaces up-to-date payment status and history from the API.",
     ],
-    impact: "Enabled 2,000+ students to access personalized learning content seamlessly across 15 courses.",
+    impact: "Allowed borrowers and co-owners a safe way to view and update multiple mortgages, replacing manual spreadsheets and making payment status understandable for both parties.",
     links: {
-      live: "https://example.com/lti-demo",
-      repo: "https://github.com/gerryjr/lti-canvas",
+      private: "Delivered to Client"
     },
   },
   {
     id: "microservices-api-gateway",
     title: "User Engagement Analysis",
-    whatItIs: "Centralized API gateway routing requests to 15+ microservices with authentication, rate limiting, and caching.",
-    employer: "SaaS Company",
-    role: "Backend Engineer",
-    date: "October 2023",
+    whatItIs: "A Natural Language Processing (NLP) and Statistical research pipeline for analyzing user messages.",
+    employer: "CP-LEADS",
+    role: "Data Analyst",
+    date: "Jan 2024 - Nov 2024",
     image: projectResearchPlatform,
     stackIcons: [
-      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-      { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-      { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
-      { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
-      { name: "JWT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" },
+      iconR, iconPython, iconPandas, iconDynamoDB,
     ],
-    stackText: ["Node.js", "Express", "Redis", "Docker", "Kubernetes", "JWT"],
     challenges: [
-      "Designed token-based rate limiting preventing abuse while allowing 10K req/sec burst capacity.",
-      "Implemented circuit breaker pattern reducing cascading failures by 95% during service outages.",
+      "Used Python and Pandas to clean and preprocess large-scale DynamoDB exports for downstream NLP analysis.",
+      "Applied R-based topic modeling to uncover recurring themes and visualize message patterns across courses.",
+      "Combined sentiment outputs and topic clusters into a single research dataset for comparative analysis.",
     ],
-    impact: "Unified API access for 50K monthly users while reducing average response latency from 800ms to 120ms.",
+    impact: "Produced interpretable sentiment trends and topic structures that enabled researchers to better understand user behavior and refine platform design.",
     links: {
-      repo: "https://github.com/gerryjr/api-gateway",
+      private: "Work Repo",
     },
   },
   {
     id: "ci-cd-automation-pipeline",
     title: "Python Webpage Creation Package",
-    whatItIs: "Automated deployment pipeline using GitHub Actions, Docker, and AWS ECS for zero-downtime releases.",
-    employer: "Tech Startup",
-    role: "DevOps Engineer",
-    date: "July 2023",
+    whatItIs: "A Python package that lets users build full HTML webpages directly from Google Colab notebooks, with automatic project saving through the Google Drive API.",
+    employer: "CodeAI",
+    role: "Software Engineer Intern",
+    date: "Jun 2023 - Sep 2023",
     image: projectPython2Html,
     stackIcons: [
-      { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-      { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "ECS", icon: "https://icon.icepanel.io/AWS/svg/Compute/Elastic-Container-Service.svg" },
-      { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+      iconGoogleAPI, iconPython, iconGoogleColab, iconHTML
     ],
-    stackText: ["GitHub Actions", "Docker", "AWS", "ECS", "Terraform"],
     challenges: [
-      "Automated infrastructure provisioning using Terraform reducing deployment time from 2 hours to 15 min.",
-      "Implemented blue-green deployment strategy achieving 99.99% uptime during 200+ production releases.",
+      "Designed a Python-to-HTML conversion system that turned user-written Colab code blocks into structured webpages.",
+      "Integrated Google Drive API to auto-save project files, ensuring users' work persisted across sessions.",
+      "Built helper scripts to streamline asset management so users could generate, update, and export pages with minimal setup.",
     ],
-    impact: "Enabled 5 daily deployments with automated rollback, increasing team velocity by 300%.",
+    impact: "Enabled non-web developers to produce HTML pages from simple Python notebooks, eliminating the need to learn frontend tools.",
     links: {
-      repo: "https://github.com/gerryjr/ci-cd-pipeline",
+      private: "Work Repo",
     },
   },
   {
     id: "orange-calculator",
-    title: "Orange Calculator",
-    whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational apps using LTI 1.3 handshake.",
+    title: "Mandarin Calculator",
+    whatItIs: "A Streamlit web app built in Python that automates mandarin-production calculations for employees, replacing manual math with a simple interactive interface.",
     employer: "University of California",
-    role: "Solo Full-Stack Developer",
-    date: "September 2024",
+    role: "Solo Developer",
+    date: "Jun 2022 - Jan 2023",
     image: porjectOrangeCalc,
     stackIcons: [
-      { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-      { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
-      { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
-      { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
-      { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
-      { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      iconStreamlit, iconPython, iconHTML
     ],
-    stackText: ["AWS", "Lambda", "DynamoDB", "Cognito", "API Gateway", "React", "TypeScript", "HTML"],
     challenges: [
-      "Implemented OAuth 2.0 + JWT validation flow per IMS Global spec with zero security incidents.",
-      "Architected serverless backend handling 500+ concurrent users with 99.9% uptime.",
+      "Built a Streamlit UI that handled all calculator logic in Python while rendering clean, HTML-backed components.",
+      "Converted hand-computed formulas into reliable programmatic calculations to eliminate user error.",
+      "Designed the app to be simple enough for daily use by several employees with no technical background.",
     ],
-    impact: "Enabled 2,000+ students to access personalized learning content seamlessly across 15 courses.",
+
+    impact: "Replaced manual production math with a fast, error-proof tool used daily by employees, removing the need to memorize formulas and improving calculation speed.",
     links: {
-      live: "https://example.com/lti-demo",
-      repo: "https://github.com/gerryjr/lti-canvas",
+      private: "Delivered to Client"
     },
   },
 ];

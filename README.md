@@ -51,7 +51,7 @@ All colors use HSL values and semantic tokens for consistency.
 ## 🧪 Project Data Validation
 
 Each project entry is validated on import:
-- Exactly 2 challenges required
+- No more than 4 challenges
 - Stack icons and text must match 1:1
 - Character limits enforced
 
@@ -91,7 +91,6 @@ Edit `src/data/projects.ts`:
   whatItIs: "One sentence description", // ≤ 140 chars
   role: "Your Role",
   stackIcons: [...], // Array of tech icons
-  stackText: [...], // Must match stackIcons 1:1
   challenges: ["Challenge 1", "Challenge 2"], // Exactly 2, ≤ 90 chars each
   impact: "Quantified impact", // 1 line with number
   links: { live?, repo?, demo? }

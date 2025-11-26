@@ -1,7 +1,7 @@
 import { Project } from "@/types/project";
 import { TechIcon } from "./TechIcon";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Github, Calendar } from "lucide-react";
+import { ExternalLink, Github, Calendar, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
@@ -9,14 +9,14 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const MAX_ICONS = 8;
+  const MAX_ICONS = 14;
   const visibleIcons = project.stackIcons.slice(0, MAX_ICONS);
   const hiddenCount = project.stackIcons.length - MAX_ICONS;
 
   return (
-    <Card className="h-full border-border hover:border-accent transition-colors duration-200 overflow-hidden">
+    <Card className="h-full border-border hover:border-accent transition-colors duration-200 overflow-hidden bg-gradient-to-br from-muted/5 to-transparent shadow-md hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200">
       {/* Project Image */}
-      <div className="w-full h-48 overflow-hidden bg-muted">
+      <div className="w-full h-48 overflow-hidden bg-muted relative">
         <img
           src={project.image}
           alt={`${project.title} screenshot`}
@@ -25,6 +25,8 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           width={1200}
           height={768}
         />
+        {/* subtle image overlay to add depth */}
+        <span className="absolute inset-0 bg-gradient-to-b from-transparent to-black/5 pointer-events-none" aria-hidden />
       </div>
 
       <CardContent className="p-6 flex flex-col">
@@ -100,12 +102,26 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               </a>
             </Button>
           )}
-          {project.links.repo && (
+          {project.links.repo && !project.links.private && (
             <Button variant="secondary" size="sm" asChild>
               <a href={project.links.repo} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-1.5" />
                 Repo
               </a>
+            </Button>
+          )}
+          {project.links.private && (
+            <Button
+              variant="outline"
+              size="sm"
+              disabled
+              aria-disabled="true"
+              className="bg-muted text-foreground/70 border-muted hover:bg-muted/95 disabled:opacity-80"
+            >
+              <Lock className="w-4 h-4 mr-1.5" />
+              <span className="text-xs text-foreground/70">
+                {project.links.private || "Private"}
+              </span>
             </Button>
           )}
         </div>

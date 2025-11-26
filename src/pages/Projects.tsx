@@ -7,7 +7,7 @@ const Projects = () => {
       <header className="mb-10">
         <h1 className="text-3xl sm:text-4xl font-bold font-heading mb-3">Projects</h1>
         <p className="text-lg text-muted-foreground">
-          Case studies showcasing serverless architecture, secure integrations, and data-driven solutions.
+          Software projects built across professional roles, academic research positions, and commissioned work.
         </p>
       </header>
 
