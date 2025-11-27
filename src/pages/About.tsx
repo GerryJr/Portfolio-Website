@@ -19,14 +19,12 @@ const About = () => {
           </div>
           <div className="flex-1 space-y-6">
             <p className="text-xl text-foreground leading-relaxed font-light">
-              I'm a software engineer specializing in cloud-native applications for education and research. 
-              My work focuses on building secure, scalable systems using AWS serverless architecture and 
-              modern web technologies.
+              I’m a software engineer who focuses on building scalable, cloud-native systems and solving problems through
+              clean, practical design. I’ve worked on both collaborative projects and independent builds across backend, data, and integration work.
             </p>
             <p className="text-xl text-foreground leading-relaxed font-light">
-              I have hands-on experience implementing LTI 1.3 integrations, designing multi-tenant platforms 
-              with row-level security, and architecting serverless ETL pipelines. I prioritize clean architecture, 
-              performance optimization, and security best practices.
+              Outside of work, I love playing video games with my fiance and friends. I play Rocket League and Elden Ring the most, but lately I have been 
+              trying to get into books. I am not a reader but its my second year in a row trying to get into it! 
             </p>
           </div>
         </div>
@@ -39,7 +37,7 @@ const About = () => {
               </a>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <a href="www.linkedin.com/in/gerryjr" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/gerryjr" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
@@ -56,7 +54,7 @@ const About = () => {
 
       {/* Public Speaks */}
       <section className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">Public Speaks</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">Public Presentation</h1>
         <div className="grid md:grid-cols-2 items-start gap-8 mb-12">
           {speakingEngagements.map((event, index) => (
             <Card key={event.id} className="overflow-hidden hover:border-accent transition-colors">

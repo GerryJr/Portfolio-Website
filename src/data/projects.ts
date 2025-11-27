@@ -204,7 +204,7 @@ export const projects: Project[] = [
     challenges: [
       "Designed a Python-to-HTML conversion system that turned user-written Colab code blocks into structured webpages.",
       "Integrated Google Drive API to auto-save project files, ensuring users' work persisted across sessions.",
-      "Built helper scripts to streamline asset management so users could generate, update, and export pages with minimal setup.",
+      "Created standardized unti testing to validate package functionality and reliability during development.",
     ],
     impact: "Enabled non-web developers to produce HTML pages from simple Python notebooks, eliminating the need to learn frontend tools.",
     links: {

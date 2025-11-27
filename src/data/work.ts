@@ -46,13 +46,22 @@ export const workExperience: WorkExperience[] = [
       }
     ],
     technologies: [
-      "AWS Lambda",
-      "React",
-      "TypeScript",
       "Python",
+      "Typescript",
+      "R",
+      "AWS Console",
+      "AWS Lambda",
+      "DynamoDB",
+      "AWS CDK",
+      "Bedrock",
+      "React",
+      "HTML/CSS",
       "LTI 1.3",
       "OAuth 2.0",
-      "Canvas API"
+      "JWT",
+      "Docker",
+      "Pandas",
+      "Agile"
     ]
   },
   {
@@ -87,12 +96,15 @@ export const workExperience: WorkExperience[] = [
     ],
     technologies: [
       "R",
+      "Python",
+      "Pandas",
       "ggplot2",
+      "Natural Language Processing (NLP)",
       "Topic Modeling (LDA)",
       "Sentiment Analysis",
       "Statistical Analysis",
-      "Cohort Analysis",
-      "Predictive Modeling"
+      "Predictive Modeling",
+      "DynamoDB",
     ]
   },
   {
@@ -106,7 +118,7 @@ export const workExperience: WorkExperience[] = [
     summary: [
       "Created a Python package that generated full HTML sites from notebook-style code.",
       "Integrated Google Drive API to automatically save user projects from Google Colab.",
-      "Improved internal tooling reliability and reduced manual steps for developers and users."
+      "Introduced Modular Unittesting for our Python Package."
     ],
     details: [
       {
@@ -120,20 +132,21 @@ export const workExperience: WorkExperience[] = [
           "Added Google Colab and Drive API integration so notebook projects were automatically saved and versioned. This automation reduced lost work, simplified review for instructors, and cut down on support around file management."
       },
       {
-        title: "Streamlined Tooling and Reduced Manual Effort",
+        title: "Introduced Modular Unittesting for our Python Package",
         description:
-          "Packaged the library and scripts into a reusable workflow that others at CodeAI could adopt with minimal setup. Turning a multi-step process into a single pipeline reduced setup time for new teaching materials and internal demos."
+          "Created standardized unit testing to validate package functionality and reliability during development. This was to support the flow of production to ensure other commited work did not break existing features."
       }
     ],
     technologies: [
       "Python",
-      "Flask",
+      "Google Drive API",
+      "Google Colab",
+      "HTML/CSS",
       "pytest",
       "unittest",
       "REST APIs",
-      "GitHub Actions",
       "Team Leadership",
-      "Agile/Scrum"
+      "Agile"
     ]
   },
   {
@@ -171,10 +184,10 @@ export const workExperience: WorkExperience[] = [
       "Object-Oriented Programming",
       "Data Structures & Algorithms",
       "APIs & REST",
-      "Flask",
       "pandas & numpy",
       "Git",
-      "Testing & Debugging"
+      "Testing & Debugging",
+      "Agile"
     ]
   }
 ];
