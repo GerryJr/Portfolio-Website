@@ -12,7 +12,7 @@ export const education: Education[] = [
     title: "Bachelor's Degree",
     institution: "University of California, Irvine",
     location: "Irvine, CA",
-    date: "Expected June 2026",
+    date: "Expected Sep 2026",
     summary: [
       "Bachelor of Science in Mathematics",
       "Co-author of 2025 peer-reviewed article in \"Computer Science Education (Vol. 35, Issue 4)\"",
