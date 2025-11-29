@@ -13,6 +13,11 @@ export const skills: SkillCategory = {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
     },
     {
+      name: "JavaScript",
+      years: 2,
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    },
+    {
       name: "R",
       years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
