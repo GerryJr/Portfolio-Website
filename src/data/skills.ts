@@ -132,6 +132,11 @@ export const skills: SkillCategory = {
       name: "Docker",
       years: 2,
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+    },
+    {
+      name: "Postman",
+      years: 2,
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
     }
   ],
   other: [
