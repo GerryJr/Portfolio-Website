@@ -4,7 +4,7 @@ export const Footer = () => {
   //   month: "long",
   //   year: "numeric",
   // });
-  const monthYear = "December  2025";
+  const monthYear = "December 2025";
 
   return (
     <footer className="border-t border-border mt-auto">

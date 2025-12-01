@@ -187,7 +187,6 @@ export const workExperience: WorkExperience[] = [
       "pandas & numpy",
       "Git",
       "Testing & Debugging",
-      "Agile"
     ]
   }
 ];
