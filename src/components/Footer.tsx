@@ -1,9 +1,10 @@
 export const Footer = () => {
   const currentDate = new Date();
-  const monthYear = currentDate.toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
+  // const monthYear = currentDate.toLocaleDateString("en-US", {
+  //   month: "long",
+  //   year: "numeric",
+  // });
+  const monthYear = "December  2025";
 
   return (
     <footer className="border-t border-border mt-auto">
