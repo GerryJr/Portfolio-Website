@@ -7,7 +7,7 @@ export const JsonLd = () => {
     "url": "https://gerryjr.dev",
     "sameAs": [
       "https://github.com/gerryjr",
-      "https://linkedin.com/in/gerardolopez"
+      "https://linkedin.com/in/gerryjr"
     ],
     "description":
       "Building scalable cloud systems for real-world data. Delivering secure, full-stack solutions from idea to launch.",

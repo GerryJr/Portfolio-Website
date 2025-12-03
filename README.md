@@ -8,7 +8,7 @@ The site is structured as a small single-page app with multiple routes (Home, Pr
 
 - **Portfolio:** https://gerryjr.dev
 - **GitHub:** https://github.com/gerryjr
-- **LinkedIn:** https://linkedin.com/in/gerardolopez
+- **LinkedIn:** https://linkedin.com/in/gerryjr
 
 ---
 
