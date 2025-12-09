@@ -61,16 +61,22 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             <span>{project.date}</span>
           </div>
         </div>
-        
         {/* What it is */}
-        <p className="text-sm text-foreground mb-2">{project.whatItIs}</p>
+        <div className="mb-3">
+          <p className="text-sm text-foreground leading-relaxed">
+            <span className="inline-flex items-center px-2 py-0.5 rounded-sm bg-muted/70 text-[11px] uppercase tracking-wide font-semibold text-muted-foreground mr-2 align-middle">
+              Project:
+            </span>
+            {project.whatItIs}
+          </p>
+        </div>
         
         {/* Visual Stack Icons with Names */}
         <div className="flex items-start gap-3 mb-3 flex-wrap" role="list" aria-label="Technology stack">
           {visibleIcons.map((tech, idx) => (
-            <div key={idx} role="listitem" className="flex flex-col items-center gap-1">
-              <TechIcon name={tech.name} icon={tech.icon} svgPath={tech.svgPath} size={28} />
-              <span className="text-xs text-muted-foreground">{tech.name}</span>
+            <div key={idx} role="listitem" className="flex flex-col items-center gap-1 w-14">
+              <TechIcon name={tech.name} icon={tech.icon} svgPath={tech.svgPath} size={30} />
+              <span className="text-[11px] text-muted-foreground text-center leading-snug">{tech.name}</span>
             </div>
           ))}
           {hiddenCount > 0 && (
@@ -84,9 +90,19 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         
         {/* Challenges */}
-        <div className="mb-2.5">
-          <div className="w-full flex items-center justify-between text-sm font-medium mb-1.5">
-            <span>Key Challenges</span>
+        <div className="mb-3">
+          <div className="w-full flex items-center justify-between text-sm font-semibold tracking-wide text-muted-foreground uppercase mb-1.5">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center px-2 py-0.5 rounded-sm bg-muted/70 text-[11px] tracking-wide font-semibold text-muted-foreground">
+                Key Challenges:
+              </span>
+              <span
+                className={`text-[11px] font-semibold text-muted-foreground/90 tracking-wide uppercase transition-all duration-300 ease-in-out ${isOpen ? "opacity-0 -translate-y-1" : "opacity-100 translate-y-0"}`}
+                aria-hidden={isOpen}
+              >
+                See more
+              </span>
+            </div>
             <ChevronDown
               className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
               aria-hidden
@@ -94,7 +110,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
           <div
             id={challengesId}
-            className={`overflow-hidden transition-[max-height,opacity] duration-200 ease-out ${isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}`}
+            className={`overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}`}
             aria-hidden={!isOpen}
           >
             <ul className="space-y-1.5 text-sm text-foreground pt-1">
@@ -110,7 +126,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         
         {/* Impact */}
         <div className="mb-3">
-          <p className="text-sm font-medium text-accent">{project.impact}</p>
+          <p className="text-sm leading-relaxed text-foreground">
+            <span className="inline-flex items-center px-2 py-0.5 rounded-sm bg-muted/70 text-[11px] uppercase tracking-wide font-semibold text-muted-foreground mr-2 align-middle">
+              Impact:
+            </span>
+            <span className="font-semibold text-accent">{project.impact}</span>
+          </p>
         </div>
         
         {/* Links */}

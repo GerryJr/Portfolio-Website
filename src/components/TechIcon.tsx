@@ -13,21 +13,17 @@ export const TechIcon = ({ name, svgPath, icon, size = 22 }: TechIconProps) => {
     <img
       src={icon}
       alt={name}
-      width={size}
-      height={size}
-      className="text-icon-neutral hover:text-icon-hover transition-all duration-200 group-hover:scale-110"
+      className="w-full h-full object-contain text-icon-neutral hover:text-icon-hover transition-all duration-200 group-hover:scale-110"
     />
   ) : (
     <svg
-      width={size}
-      height={size}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="text-icon-neutral hover:text-icon-hover transition-all duration-200 group-hover:scale-110"
+      className="w-full h-full text-icon-neutral hover:text-icon-hover transition-all duration-200 group-hover:scale-110"
       aria-label={name}
       role="img"
     >
@@ -35,11 +31,16 @@ export const TechIcon = ({ name, svgPath, icon, size = 22 }: TechIconProps) => {
     </svg>
   );
 
+  const containerStyle = { width: size, height: size };
+
   return (
     <TooltipProvider delayDuration={200}>
       <Tooltip>
         <TooltipTrigger asChild>
-          <span className="inline-block rounded">
+          <span
+            className="inline-flex items-center justify-center rounded"
+            style={containerStyle}
+          >
             {iconElement}
           </span>
         </TooltipTrigger>
