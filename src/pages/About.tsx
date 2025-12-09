@@ -1,48 +1,63 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink, MapPin, Calendar, ChevronDown } from "lucide-react";
-import heroProfessional from "@/assets/hero-professional.jpg";
+import { Github, Linkedin, Mail, ExternalLink, MapPin, Calendar } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { useState } from "react";
 import { speakingEngagements } from "@/data/speaking";
 import { publications } from "@/data/publications";
+import { aboutData } from "@/data/about";
 
 const About = () => {
-  const [openSpeech, setOpenSpeech] = useState<number | null>(null);
-  return <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  return (
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Intro with Hero Image */}
       <section className="mb-20">
         <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-8 text-foreground">About Me</h1>
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <div className="flex-shrink-0">
-            <img src={heroProfessional} alt="Gerardo Lopez - Professional headshot" className="w-48 h-48 object-cover rounded-full shadow-xl" loading="lazy" />
+            <img
+              src={aboutData.hero.image}
+              alt={aboutData.hero.alt}
+              className="w-48 h-48 object-cover rounded-full shadow-xl"
+              loading="lazy"
+            />
           </div>
           <div className="flex-1 space-y-6">
-            <p className="text-xl text-foreground leading-relaxed font-light">
-              I’m a software engineer who focuses on building scalable, cloud-native systems and solving problems through
-              clean, practical design. I’ve worked on both collaborative projects and independent builds across backend, data, and integration work.
-            </p>
-            <p className="text-xl text-foreground leading-relaxed font-light">
-              Outside of work, I love playing video games with my fiance and friends. I play Rocket League and Elden Ring the most, but lately I have been 
-              trying to get into books. I am not a reader but its my second year in a row trying to get into it! 
-            </p>
+            {aboutData.hero.paragraphs.map((paragraph, idx) => (
+              <p key={idx} className="text-xl text-foreground leading-relaxed font-light">
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
-        <div className="space-y-6">
+        <div className="space-y-6" id="contact">
           <div className="flex flex-wrap gap-4 mt-10">
-            <Button variant="default" size="lg" asChild>
+            <Button
+              variant="default"
+              size="lg"
+              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
+              asChild
+            >
               <a href="https://github.com/gerryjr" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 GitHub
               </a>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
+            <Button
+              variant="secondary"
+              size="lg"
+              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] hover:bg-secondary/90"
+              asChild
+            >
               <a href="https://linkedin.com/in/gerryjr" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
             </Button>
-            <Button variant="secondary" size="lg" asChild>
+            <Button
+              variant="secondary"
+              size="lg"
+              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] hover:bg-secondary/90"
+              asChild
+            >
               <a href="mailto:gerardolopezjr1178@gmail.com">
                 <Mail className="mr-2 h-5 w-5" />
                 Email
@@ -56,8 +71,8 @@ const About = () => {
       <section className="mb-20">
         <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">Public Presentation</h1>
         <div className="grid md:grid-cols-2 items-start gap-8 mb-12">
-          {speakingEngagements.map((event, index) => (
-            <Card key={event.id} className="overflow-hidden hover:border-accent transition-colors">
+          {speakingEngagements.map((event) => (
+            <Card key={event.id} className="overflow-hidden border border-border transition-colors">
               <div className="aspect-video overflow-hidden">
                 <img src={event.image} alt={`Gerardo Lopez at ${event.title}`} className="w-full h-full object-cover" loading="lazy" />
               </div>
@@ -76,21 +91,18 @@ const About = () => {
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   {event.description}
                 </p>
-                <Collapsible open={openSpeech === index} onOpenChange={(isOpen) => setOpenSpeech(isOpen ? index : null)}>
-                  <CollapsibleTrigger className="flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors">
-                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${openSpeech === index ? 'rotate-180' : ''}`} />
+                <div className="mt-4">
+                  <p className="text-sm font-semibold text-accent mb-3">
                     Key Concepts & Technologies
-                  </CollapsibleTrigger>
-                  <CollapsibleContent forceMount>
-                    <div className={`overflow-hidden transition-[max-height,opacity,margin] duration-500 ease-in-out ${openSpeech === index ? 'max-h-48 opacity-100 mt-3' : 'max-h-0 opacity-0 mt-0'}`}>
-                      <div className="flex flex-wrap gap-2">
-                        {event.technologies.map((tech, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">{tech}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </CollapsibleContent>
-                </Collapsible>
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {event.technologies.map((tech, idx) => (
+                      <span key={idx} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
@@ -103,16 +115,18 @@ const About = () => {
         {publications.map((pub) => {
           // Parse markdown-like formatting
           const formattedText = pub.text
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            .replace(/\*(.*?)\*/g, '<em>$1</em>');
-          
+            .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+            .replace(/\*(.*?)\*/g, "<em>$1</em>");
+
           return (
             <div key={pub.id} className="bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors mb-12">
-              <p 
-                className="text-lg text-foreground leading-relaxed mb-4 font-light"
-                dangerouslySetInnerHTML={{ __html: formattedText }}
-              />
-              <a href={pub.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-accent hover:text-accent/80 transition-colors text-lg">
+              <p className="text-lg text-foreground leading-relaxed mb-4 font-light" dangerouslySetInnerHTML={{ __html: formattedText }} />
+              <a
+                href={pub.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-accent hover:text-accent/80 transition-colors text-lg"
+              >
                 <ExternalLink className="mr-2 h-5 w-5" />
                 View Publication
               </a>
@@ -120,6 +134,37 @@ const About = () => {
           );
         })}
       </section>
-    </div>;
+
+      {/* Personal Interests */}
+      <section className="mb-20">
+        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-8 text-foreground">
+          {aboutData.personalInterests.title}
+        </h1>
+        <div className="flex flex-col md:flex-row items-start gap-8">
+          <div className="flex-1 space-y-6">
+            {aboutData.personalInterests.paragraphs.map((paragraph, idx) => (
+              <p key={idx} className="text-xl text-foreground leading-relaxed font-light">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <div className="flex-shrink-0 w-full md:w-60 lg:w-72 max-w-sm md:max-w-md ml-auto">
+            <div className="rounded-3xl overflow-hidden shadow-xl border border-border/60 relative aspect-[4/3]">
+              <img
+                src={aboutData.personalInterests.image.src}
+                alt={aboutData.personalInterests.image.alt}
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+              {aboutData.personalInterests.image.note}
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
+
 export default About;

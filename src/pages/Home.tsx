@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { homeHighlights } from "@/data/highlights";
@@ -56,22 +56,27 @@ const Home = () => {
           {/* === End Highlight Strip === */}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" asChild>
+            <Button
+              size="lg"
+              className="group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
+              asChild
+            >
               <Link to="/projects">
                 View Projects
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
 
-            <Button variant="secondary" size="lg" asChild>
-              <a
-                href="/Gerardo-Lopez-Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FileText className="mr-2 h-5 w-5" />
-                Resume
-              </a>
+            <Button
+              variant="secondary"
+              size="lg"
+              className="group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] hover:bg-secondary/90"
+              asChild
+            >
+              <Link to="/about#contact">
+                <ArrowUpRight className="mr-2 h-5 w-5" />
+                Contact Info
+              </Link>
             </Button>
           </div>
         </div>

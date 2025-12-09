@@ -137,7 +137,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         {/* Links */}
         <div className="flex gap-2 mt-auto">
           {project.links.live && (
-            <Button variant="default" size="sm" asChild>
+            <Button
+              variant="default"
+              size="sm"
+              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(0,0,0,0.15)]"
+              asChild
+            >
               <a
                 href={project.links.live}
                 target="_blank"
