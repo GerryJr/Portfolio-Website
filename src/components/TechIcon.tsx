@@ -39,10 +39,7 @@ export const TechIcon = ({ name, svgPath, icon, size = 22 }: TechIconProps) => {
     <TooltipProvider delayDuration={200}>
       <Tooltip>
         <TooltipTrigger asChild>
-          <span
-            className="inline-block focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded"
-            tabIndex={0}
-          >
+          <span className="inline-block rounded">
             {iconElement}
           </span>
         </TooltipTrigger>

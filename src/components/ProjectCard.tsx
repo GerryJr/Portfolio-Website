@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Project } from "@/types/project";
 import { TechIcon } from "./TechIcon";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Github, Calendar, Lock } from "lucide-react";
+import { ExternalLink, Github, Calendar, Lock, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
@@ -12,9 +13,25 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
   const MAX_ICONS = 14;
   const visibleIcons = project.stackIcons.slice(0, MAX_ICONS);
   const hiddenCount = project.stackIcons.length - MAX_ICONS;
+  const [isOpen, setIsOpen] = useState(false);
+  const challengesId = `${project.id}-challenges`;
 
   return (
-    <Card className="h-full border-border hover:border-accent transition-colors duration-200 overflow-hidden bg-gradient-to-br from-muted/5 to-transparent shadow-md hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200">
+    <Card
+      role="button"
+      tabIndex={0}
+      aria-expanded={isOpen}
+      aria-controls={challengesId}
+      onClick={() => setIsOpen((prev) => !prev)}
+      onKeyDown={(event) => {
+        if (event.target !== event.currentTarget) return;
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setIsOpen((prev) => !prev);
+        }
+      }}
+      className="h-full border-border hover:border-accent overflow-hidden bg-gradient-to-br from-muted/5 to-transparent shadow-md hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+    >
       {/* Project Image */}
       <div className="w-full h-48 overflow-hidden bg-muted relative">
         <img
@@ -67,16 +84,28 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         
         {/* Challenges */}
-        <div className="mb-2.5 flex-grow">
-          <h4 className="text-sm font-medium mb-1.5">Key Challenges</h4>
-          <ul className="space-y-1.5 text-sm text-foreground">
-            {project.challenges.map((challenge, idx) => (
-              <li key={idx} className="flex items-start">
-                <span className="text-accent mr-2">•</span>
-                <span>{challenge}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="mb-2.5">
+          <div className="w-full flex items-center justify-between text-sm font-medium mb-1.5">
+            <span>Key Challenges</span>
+            <ChevronDown
+              className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+              aria-hidden
+            />
+          </div>
+          <div
+            id={challengesId}
+            className={`overflow-hidden transition-[max-height,opacity] duration-200 ease-out ${isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"}`}
+            aria-hidden={!isOpen}
+          >
+            <ul className="space-y-1.5 text-sm text-foreground pt-1">
+              {project.challenges.map((challenge, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="text-accent mr-2">-</span>
+                  <span>{challenge}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         
         {/* Impact */}
@@ -88,7 +117,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="flex gap-2 mt-auto">
           {project.links.live && (
             <Button variant="default" size="sm" asChild>
-              <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.links.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(event) => event.stopPropagation()}
+              >
                 <ExternalLink className="w-4 h-4 mr-1.5" />
                 Live
               </a>
@@ -96,7 +130,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           )}
           {project.links.demo && (
             <Button variant="default" size="sm" asChild>
-              <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.links.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(event) => event.stopPropagation()}
+              >
                 <ExternalLink className="w-4 h-4 mr-1.5" />
                 Demo
               </a>
@@ -104,7 +143,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           )}
           {project.links.repo && !project.links.private && (
             <Button variant="secondary" size="sm" asChild>
-              <a href={project.links.repo} target="_blank" rel="noopener noreferrer">
+              <a
+                href={project.links.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(event) => event.stopPropagation()}
+              >
                 <Github className="w-4 h-4 mr-1.5" />
                 Repo
               </a>
