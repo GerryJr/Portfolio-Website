@@ -148,8 +148,8 @@ const About = () => {
               </p>
             ))}
           </div>
-          <div className="flex-shrink-0 w-full md:w-60 lg:w-72 max-w-sm md:max-w-md ml-auto">
-            <div className="rounded-3xl overflow-hidden shadow-xl border border-border/60 relative aspect-[4/3]">
+          <div className="flex-shrink-0 w-full md:w-52 lg:w-60 max-w-xs md:max-w-sm ml-auto">
+            <div className="rounded-3xl overflow-hidden shadow-xl border border-border/60 relative aspect-[2586/3448]">
               <img
                 src={aboutData.personalInterests.image.src}
                 alt={aboutData.personalInterests.image.alt}

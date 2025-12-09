@@ -40,7 +40,7 @@ export const education: Education[] = [
     title: "High School Diploma",
     institution: "McFarland High School",
     location: "McFarland, CA",
-    date: "June 2020",
+    date: "",
     summary: [
       "Highest Honors Recipient",
       "Mathematics Medallion Recipient",
