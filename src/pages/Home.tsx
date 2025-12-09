@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.jpg";
@@ -34,19 +35,22 @@ const Home = () => {
           </p>
 
           {/* === Highlight Strip (with fade + lift animation) === */}
-          <div className="hidden sm:grid grid-cols-3 gap-4 pt-2 max-w-3xl mx-auto">
+          <div className="hidden sm:grid grid-cols-3 gap-4 pt-2 max-w-4xl mx-auto">
             {homeHighlights.map((item, idx) => (
-              <div
+              <Card
                 key={item.title}
                 style={{ animationDelay: `${idx * 0.12}s` }}
-                className="p-5 rounded-xl border border-border/60 bg-card/60 backdrop-blur-sm shadow-[0_2px_10px_rgba(0,0,0,0.06)]
+                className="relative overflow-hidden rounded-md border border-border/70 text-center
+                           bg-card/85 backdrop-blur-sm shadow-[0_10px_28px_rgba(0,0,0,0.05)]
                            opacity-0 translate-y-2 animate-[fadeInUp_0.5s_ease-out_forwards]"
               >
-                <p className="font-semibold text-foreground/90">{item.title}</p>
-                <p className="text-sm text-muted-foreground/90 mt-1">
-                  {item.description}
-                </p>
-              </div>
+                <CardContent className="p-5 space-y-2.5 flex flex-col items-center justify-center min-h-[140px]">
+                  <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-xs text-center">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
           {/* === End Highlight Strip === */}
