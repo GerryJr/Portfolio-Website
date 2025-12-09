@@ -10,7 +10,7 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const MAX_ICONS = 14;
+  const MAX_ICONS = 16;
   const visibleIcons = project.stackIcons.slice(0, MAX_ICONS);
   const hiddenCount = project.stackIcons.length - MAX_ICONS;
   const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +72,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
         
         {/* Visual Stack Icons with Names */}
-        <div className="flex items-start gap-3 mb-3 flex-wrap" role="list" aria-label="Technology stack">
+        <div className="flex items-start gap-x-[1.9px] gap-y-3 mb-3 flex-wrap" role="list" aria-label="Technology stack">
           {visibleIcons.map((tech, idx) => (
             <div key={idx} role="listitem" className="flex flex-col items-center gap-1 w-14">
               <TechIcon name={tech.name} icon={tech.icon} svgPath={tech.svgPath} size={30} />

@@ -25,7 +25,7 @@ const iconS3 = { name: "S3", icon: "https://icon.icepanel.io/AWS/svg/Storage/Sim
 const iconBedrock = { name: "Bedrock", icon: "https://www.awsicon.com/static/images/Service-Icons/Artificial-Intelligence/16/svg/Bedrock.svg" }
 const iconCDK = { name: "CDK", icon: "https://www.awsicon.com/static/images/Service-Icons/Developer-Tools/16/svg/Cloud-Development-Kit.svg" }
 const iconPython = { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" }
-const iconCloudWatch = { name: "CloudWatch", icon: "https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" }
+const iconCloudWatch = { name: "Cloud Watch", icon: "https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" }
 const iconPostman = { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" }
 const iconPandas = { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" }
 const iconMongoDB = { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" }
@@ -52,7 +52,7 @@ export const projects: Project[] = [
     date: "Jun 2025 - Present",
     image: projectLtiCanvas,
     stackIcons: [
-      iconAWS, iconTS, iconCDK, iconLambda, iconDynamoDB, iconCognito, iconGateway, iconCloudWatch, iconPostman, iconDocker, iconReact, iconHTML
+      iconAWS, iconTS, iconNodeJS, iconCDK, iconLambda, iconDynamoDB, iconCognito, iconGateway, iconCloudWatch, iconPostman, iconDocker, iconReact, iconHTML
     ],
     challenges: [
       "Coordinated with an external contractor to deliver a secure, compliant LTI 1.3 integration.",
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     date: "Jul 2024 - May 2025",
     image: projectLLMTester,
     stackIcons: [
-      iconAWS, iconPython, iconTS, iconCDK, iconS3, iconLambda, iconBedrock, iconPostman, iconGateway, iconCloudWatch, iconCognito, iconDocker, iconReact, iconHTML
+      iconAWS, iconPython, iconTS, iconNodeJS, iconCDK, iconS3, iconLambda, iconBedrock, iconPostman, iconGateway, iconCloudWatch, iconCognito, iconDocker, iconReact, iconHTML
     ],
     challenges: [
       "Independently architected a scalable AWS backend using CDK for fast, trackable development.",
