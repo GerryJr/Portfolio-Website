@@ -79,7 +79,9 @@ export const skills: SkillCategory = {
     {
       name: "Flask",
       years: 1,
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+      iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+      invertOnDark: true
     },
   ],
   cloud: [
