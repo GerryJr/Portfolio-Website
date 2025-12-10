@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -23,7 +23,8 @@ export const Navigation = () => {
     []
   );
 
-  const isDark = resolvedTheme === "dark";
+  const effectiveTheme = resolvedTheme === "system" ? systemTheme : resolvedTheme;
+  const isDark = effectiveTheme === "dark";
 
   const toggleTheme = () => {
     setTheme(isDark ? "light" : "dark");
