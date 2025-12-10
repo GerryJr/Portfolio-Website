@@ -1,12 +1,12 @@
 import { Project, validateProject } from "@/types/project";
 import projectLLMTester from "@/assets/project-tester-tool.png";
-import projectLtiCanvas from "@/assets/project-lti-canvas.png";
+import projectLtiCanvas from "@/assets/project-lti-canvas.webp";
 import projectResearchPlatform from "@/assets/project-research-platform.png";
-import projectEtlPipeline from "@/assets/project-etl-pipeline.png";
-import projectPapyrusAI from "@/assets/project-papyrusai.png";
+import projectEtlPipeline from "@/assets/project-etl-pipeline.webp";
+import projectPapyrusAI from "@/assets/project-papyrusai.webp";
 import projectPython2Html from "@/assets/project-webpage-creation.png";
-import projectStorageTracker from "@/assets/project-sortage-tracker.png";
-import porjectMortgageTracker from "@/assets/project-mortgage.png"
+import projectStorageTracker from "@/assets/project-sortage-tracker.webp";
+import porjectMortgageTracker from "@/assets/project-mortgage.webp"
 import porjectOrangeCalc from "@/assets/project-orange-calc.png"
 
 const iconAWS = { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" }

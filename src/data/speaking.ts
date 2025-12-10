@@ -1,5 +1,5 @@
 import { SpeakingEngagement } from "@/types/speaking";
-import speakingEvent1 from "@/assets/speaking-event-1.png";
+import speakingEvent1 from "@/assets/speaking-event-1.webp";
 import speakingEvent2 from "@/assets/speaking-event-2.jpg";
 
 export const speakingEngagements: SpeakingEngagement[] = [

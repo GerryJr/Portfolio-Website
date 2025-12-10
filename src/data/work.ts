@@ -1,8 +1,8 @@
 import { WorkExperience } from "@/types/work";
 import logoDLL from "@/assets/logo-dll.png";
 import logoCPLeads from "@/assets/logo-cpleads.png";
-import logoCodeAI from "@/assets/logo-codeai.jpg";
-import logoTutor from "@/assets/logo-tutor.png";
+import logoCodeAI from "@/assets/logo-codeai.webp";
+import logoTutor from "@/assets/logo-tutor.webp";
 // import heroDLL from "@/assets/hero-dll.jpg";
 // import heroCPLeads from "@/assets/hero-cpleads.jpg";
 // import heroCodeAI from "@/assets/hero-codeai.jpg";

@@ -1,8 +1,8 @@
 import { Education } from "@/types/education";
-import logoUCI from "@/assets/logo-uci.png";
-import logoMcFarland from "@/assets/logo-mcfarland.png";
-import heroUCI from "@/assets/hero-uci.jpg";
-import heroMcFarland from "@/assets/hero-mcfarland.jpg";
+import logoUCI from "@/assets/logo-uci.webp";
+import logoMcFarland from "@/assets/logo-mcfarland.webp";
+import heroUCI from "@/assets/hero-uci.webp";
+import heroMcFarland from "@/assets/hero-mcfarland.webp";
 
 export const education: Education[] = [
   {

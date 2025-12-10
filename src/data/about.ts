@@ -1,5 +1,5 @@
-import heroProfessional from "@/assets/hero-professional.jpg";
-import heroCouple from "@/assets/hero-couple.jpg";
+import heroProfessional from "@/assets/hero-professional.webp";
+import heroCouple from "@/assets/hero-couple.webp";
 
 export const aboutData = {
   hero: {
