@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Project } from "@/types/project";
 import { TechIcon } from "./TechIcon";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,17 +7,46 @@ import { Button } from "@/components/ui/button";
 
 interface ProjectCardProps {
   project: Project;
+  delay?: number;
 }
 
-export const ProjectCard = ({ project }: ProjectCardProps) => {
+export const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
   const MAX_ICONS = 16;
   const visibleIcons = project.stackIcons.slice(0, MAX_ICONS);
   const hiddenCount = project.stackIcons.length - MAX_ICONS;
+  const clampedDelay = Math.min(delay, 0.35);
   const [isOpen, setIsOpen] = useState(false);
   const challengesId = `${project.id}-challenges`;
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0,
+        // Aggressive preload so fast scrolling still triggers the animation before overshooting.
+        rootMargin: "180px 0px 180px 0px",
+      }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <Card
+      ref={cardRef}
       role="button"
       tabIndex={0}
       aria-expanded={isOpen}
@@ -30,7 +59,12 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           setIsOpen((prev) => !prev);
         }
       }}
-      className="h-full border-border hover:border-accent overflow-hidden bg-gradient-to-br from-muted/5 to-transparent shadow-md hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+      className={`h-full border-border hover:border-accent overflow-hidden bg-gradient-to-br from-muted/5 to-transparent shadow-md hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-500 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+      }`}
+      style={{
+        transitionDelay: isVisible && clampedDelay ? `${clampedDelay}s` : "0s",
+      }}
     >
       {/* Project Image */}
       <div className="w-full h-48 overflow-hidden bg-muted relative">

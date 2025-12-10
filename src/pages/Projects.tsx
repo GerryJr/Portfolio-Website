@@ -40,16 +40,20 @@ const Projects = () => {
       </header>
 
       <div className="md:hidden space-y-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projects.map((project, idx) => (
+          <ProjectCard key={project.id} project={project} delay={idx * 0.12} />
         ))}
       </div>
 
       <div className="hidden md:flex md:gap-6 lg:gap-8 items-start">
         {columns.map((col, idx) => (
           <div key={idx} className="flex-1 flex flex-col gap-6 lg:gap-8">
-            {col.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {col.map((project, projectIdx) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                delay={projectIdx * 0.12 + (idx === 1 ? 0.06 : 0)}
+              />
             ))}
           </div>
         ))}
