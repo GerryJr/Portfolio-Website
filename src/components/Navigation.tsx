@@ -21,6 +21,8 @@ export const Navigation = () => {
     "relative inline-flex items-center justify-center whitespace-nowrap text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 no-underline " +
     "after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-[80%] after:bg-black after:rounded-full " +
     "after:scale-x-0 after:opacity-0 after:origin-center after:transition-transform after:duration-350 after:ease-[cubic-bezier(0.33,1,0.68,1)] after:content-['']";
+  const mobileLink =
+    "block w-full text-left text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 no-underline";
 
   return (
     <nav className="bg-background border-b border-border sticky top-0 z-40">
@@ -113,8 +115,9 @@ export const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
                     cn(
-                      "block text-sm font-medium transition-colors",
-                      isActive ? "text-accent font-semibold" : "text-muted-foreground hover:text-accent"
+                      mobileLink,
+                      "text-muted-foreground hover:text-foreground hover:bg-black/5 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                      isActive && "text-foreground font-semibold underline decoration-2 decoration-black underline-offset-4"
                     )
                   }
                 >
@@ -126,10 +129,15 @@ export const Navigation = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
+                  className={cn(
+                    mobileLink,
+                    "text-muted-foreground hover:text-foreground hover:bg-black/5 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
-                  {link.label}
+                  <span className="underline decoration-2 decoration-transparent underline-offset-4">
+                    {link.label}
+                  </span>
                 </a>
               )
             )}
