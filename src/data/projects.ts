@@ -6,40 +6,9 @@ import projectEtlPipeline from "@/assets/project-etl-pipeline.webp";
 import projectPapyrusAI from "@/assets/project-papyrusai.webp";
 import projectPython2Html from "@/assets/project-webpage-creation.png";
 import projectStorageTracker from "@/assets/project-sortage-tracker.webp";
-import porjectMortgageTracker from "@/assets/project-mortgage.webp"
-import porjectOrangeCalc from "@/assets/project-orange-calc.png"
-
-const iconAWS = { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" }
-const iconLambda = { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" }
-const iconDynamoDB = { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" }
-const iconCognito = { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" }
-const iconGateway = { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" }
-const iconDocker = { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"}
-const iconReact = { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" }
-const iconTS = { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" }
-const iconHTML = { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" }
-const iconExpo = { name: "Expo", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg" }
-const iconSupabase = { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" }
-const iconNodeJS = { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" }
-const iconS3 = { name: "S3", icon: "https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg" }
-const iconBedrock = { name: "Bedrock", icon: "https://www.awsicon.com/static/images/Service-Icons/Artificial-Intelligence/16/svg/Bedrock.svg" }
-const iconCDK = { name: "CDK", icon: "https://www.awsicon.com/static/images/Service-Icons/Developer-Tools/16/svg/Cloud-Development-Kit.svg" }
-const iconPython = { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" }
-const iconCloudWatch = { name: "Cloud Watch", icon: "https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" }
-const iconPostman = { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" }
-const iconPandas = { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" }
-const iconMongoDB = { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" }
-const iconGoogleCloud = { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" }
-const iconR = { name: "R", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg" }
-const iconKubernetes = { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" }
-const iconJWT = { name: "JWT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" }
-const iconExpress = { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" }
-const iconRedis = { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" }
-const iconGithub = { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" }
-const iconTerraform = { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" }
-const iconGoogleAPI = { name: "Drive API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" }
-const iconGoogleColab = { name: "Google Colab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg" }
-const iconStreamlit = { name: "Streamlit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" }
+import porjectMortgageTracker from "@/assets/project-mortgage.webp";
+import porjectOrangeCalc from "@/assets/project-orange-calc.png";
+import { icons } from "./icons";
 
 
 export const projects: Project[] = [
@@ -52,7 +21,7 @@ export const projects: Project[] = [
     date: "Jun 2025 - Present",
     image: projectLtiCanvas,
     stackIcons: [
-      iconAWS, iconTS, iconNodeJS, iconCDK, iconLambda, iconDynamoDB, iconCognito, iconGateway, iconCloudWatch, iconPostman, iconDocker, iconReact, iconHTML
+      icons.aws, icons.typescript, icons.nodejs, icons.cdk, icons.lambda, icons.dynamodb, icons.cognito, icons.gateway, icons.cloudwatch, icons.postman, icons.docker, icons.react, icons.html
     ],
     challenges: [
       "Coordinated with an external contractor to deliver a secure, compliant LTI 1.3 integration.",
@@ -73,7 +42,7 @@ export const projects: Project[] = [
     date: "Aug 2025 - Present",
     image: projectStorageTracker,
     stackIcons: [
-      iconExpo, iconSupabase, iconReact, iconTS, iconHTML,
+      icons.expo, icons.supabase, icons.react, icons.typescript, icons.html,
     ],
     challenges: [
       "Built real-time inventory syncing with Supabase for scans, NFC events, and updates.",
@@ -94,7 +63,7 @@ export const projects: Project[] = [
     date: "Jul 2024 - May 2025",
     image: projectLLMTester,
     stackIcons: [
-      iconAWS, iconPython, iconTS, iconNodeJS, iconCDK, iconS3, iconLambda, iconBedrock, iconPostman, iconGateway, iconCloudWatch, iconCognito, iconDocker, iconReact, iconHTML
+      icons.aws, icons.python, icons.typescript, icons.nodejs, icons.cdk, icons.s3, icons.lambda, icons.bedrock, icons.postman, icons.gateway, icons.cloudwatch, icons.cognito, icons.docker, icons.react, icons.html
     ],
     challenges: [
       "Independently architected a scalable AWS backend using CDK for fast, trackable development.",
@@ -115,7 +84,7 @@ export const projects: Project[] = [
     date: "Mar 2024 - Jun 2024",
     image: projectPapyrusAI,
     stackIcons: [
-      iconAWS, iconPython, iconPandas, iconCDK, iconLambda, iconDynamoDB, iconPostman, iconGateway, iconCloudWatch
+      icons.aws, icons.python, icons.pandas, icons.cdk, icons.lambda, icons.dynamodb, icons.postman, icons.gateway, icons.cloudwatch
     ],
     challenges: [
       "First time building CDK infrastructure to allow multiple developers to deploy Lambda services safely to production.",
@@ -136,7 +105,7 @@ export const projects: Project[] = [
     date: "Jan 2024 - Feb 2024",
     image: projectEtlPipeline,
     stackIcons: [
-      iconPython, iconPandas, iconPostman, iconR, iconGateway, iconCloudWatch
+      icons.python, icons.pandas, icons.postman, icons.r, icons.gateway, icons.cloudwatch
     ],
     challenges: [
       "Developed async Python stress tests that emulated real-world concurrency against AWS API endpoints and related services.",
@@ -157,7 +126,7 @@ export const projects: Project[] = [
     date: "Oct 2023 - Feb 2024",
     image: porjectMortgageTracker,
     stackIcons: [
-      iconGoogleCloud, iconPython, iconMongoDB, iconReact, iconTS, iconHTML
+      icons.googlecloud, icons.python, icons.mongodb, icons.react, icons.typescript, icons.html
     ],
     challenges: [
       "Designed a MongoDB schema to support multiple mortgages per user while safely sharing views with co-owners.",
@@ -178,7 +147,7 @@ export const projects: Project[] = [
     date: "Jan 2024 - Nov 2024",
     image: projectResearchPlatform,
     stackIcons: [
-      iconR, iconPython, iconPandas, iconDynamoDB,
+      icons.r, icons.python, icons.pandas, icons.dynamodb,
     ],
     challenges: [
       "Used Python and Pandas to clean and preprocess large-scale DynamoDB exports for downstream NLP analysis.",
@@ -199,7 +168,7 @@ export const projects: Project[] = [
     date: "Jun 2023 - Sep 2023",
     image: projectPython2Html,
     stackIcons: [
-      iconGoogleAPI, iconPython, iconGoogleColab, iconHTML
+      icons.googleApi, icons.python, icons.googleColab, icons.html
     ],
     challenges: [
       "Designed a Python-to-HTML conversion system that turned user-written Colab code blocks into structured webpages.",
@@ -220,7 +189,7 @@ export const projects: Project[] = [
     date: "Jun 2022 - Jan 2023",
     image: porjectOrangeCalc,
     stackIcons: [
-      iconStreamlit, iconPython, iconHTML
+      icons.streamlit, icons.python, icons.html
     ],
     challenges: [
       "Built a Streamlit UI that handled all calculator logic in Python while rendering clean, HTML-backed components.",

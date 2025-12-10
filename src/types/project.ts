@@ -4,6 +4,7 @@ export interface TechIcon {
   icon?: string;
   iconDark?: string;
   invertOnDark?: boolean;
+  years?: number;
   docUrl?: string;
 }
 

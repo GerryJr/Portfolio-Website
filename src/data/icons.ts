@@ -1,0 +1,73 @@
+import type { TechIcon } from "@/types/project";
+
+type IconAsset = TechIcon & { invertOnDark?: boolean; years?: number };
+
+export const icons = {
+  aws: {
+    name: "AWS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+    iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+    years: 2,
+  },
+  lambda: { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
+  dynamodb: { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
+  cognito: { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
+  gateway: { name: "API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
+  s3: { name: "S3", icon: "https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg" },
+  bedrock: { name: "Bedrock", icon: "https://www.awsicon.com/static/images/Service-Icons/Artificial-Intelligence/16/svg/Bedrock.svg" },
+  cdk: { name: "CDK", icon: "https://www.awsicon.com/static/images/Service-Icons/Developer-Tools/16/svg/Cloud-Development-Kit.svg" },
+  cloudwatch: { name: "Cloud Watch", icon: "https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" },
+
+  docker: { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", years: 2 },
+  react: { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", years: 3 },
+  typescript: { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", years: 2 },
+  javascript: { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg", years: 2 },
+  html: { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", years: 4 },
+  css: { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", years: 4 },
+  expo: { name: "Expo", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg", years: 1 },
+  supabase: { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg", years: 1 },
+  nodejs: { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", years: 2 },
+  python: { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", years: 5 },
+  pandas: { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg", years: 4 },
+  numpy: { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg", years: 4 },
+  mongodb: { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg", years: 2 },
+  googlecloud: { name: "Google Cloud", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg", years: 1 },
+  r: { name: "R", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rstudio/rstudio-original.svg", years: 2 },
+  kubernetes: { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+  jwt: { name: "JWT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" },
+  express: { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  redis: { name: "Redis", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
+  terraform: { name: "Terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" },
+  googleApi: { name: "Drive API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" },
+  googleColab: { name: "Google Colab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg" },
+  streamlit: { name: "Streamlit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" },
+  postman: { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg", years: 2 },
+  githubActions: { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  github: { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", years: 4 },
+  git: { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", years: 4 },
+
+  sqlalchemy: {
+    name: "SQLAlchemy",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
+    iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-plain.svg",
+    invertOnDark: true,
+    years: 1,
+  },
+  flask: {
+    name: "Flask",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+    iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+    invertOnDark: true,
+    years: 1,
+  },
+  bootstrap: { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", years: 2 },
+  matlab: { name: "MATLAB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg", years: 2 },
+  pycharm: { name: "PyCharm", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg", years: 4 },
+  vscode: { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg", years: 1 },
+  jupyter: { name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg", years: 2 },
+  rstudio: { name: "RStudio", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg", years: 2 },
+  solidworks: { name: "SolidWorks", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidworks/solidworks-plain.svg", years: 3 },
+  wix: { name: "Wix", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wix/wix-original.svg", years: 2 },
+} satisfies Record<string, IconAsset>;
+
+export type IconKey = keyof typeof icons;
