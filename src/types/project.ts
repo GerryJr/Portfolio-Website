@@ -2,6 +2,8 @@ export interface TechIcon {
   name: string;
   svgPath?: string;
   icon?: string;
+  iconDark?: string;
+  invertOnDark?: boolean;
   docUrl?: string;
 }
 

@@ -58,7 +58,13 @@ const Skills = () => {
             <div className="flex flex-wrap gap-8">
               {skills.languages.map((skill) => (
                 <div key={skill.name} className="flex flex-col items-center gap-1 group">
-                  <TechIcon name={skill.name} icon={skill.icon} size={32} />
+                  <TechIcon
+                    name={skill.name}
+                    icon={skill.icon}
+                    iconDark={skill.iconDark}
+                    invertOnDark={skill.invertOnDark}
+                    size={32}
+                  />
                   <span className="text-base text-foreground font-medium">{skill.name}</span>
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${
@@ -108,7 +114,13 @@ const Skills = () => {
             <div className="flex flex-wrap gap-8">
               {skills.frameworks.map((skill) => (
                 <div key={skill.name} className="flex flex-col items-center gap-1 group">
-                  <TechIcon name={skill.name} icon={skill.icon} size={32} />
+                  <TechIcon
+                    name={skill.name}
+                    icon={skill.icon}
+                    iconDark={skill.iconDark}
+                    invertOnDark={skill.invertOnDark}
+                    size={32}
+                  />
                   <span className="text-base text-foreground font-medium">{skill.name}</span>
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${
@@ -156,7 +168,13 @@ const Skills = () => {
             <div className="flex flex-wrap gap-8">
               {skills.cloud.map((skill) => (
                 <div key={skill.name} className="flex flex-col items-center gap-1 group">
-                  <TechIcon name={skill.name} icon={skill.icon} size={32} />
+                  <TechIcon
+                    name={skill.name}
+                    icon={skill.icon}
+                    iconDark={skill.iconDark}
+                    invertOnDark={skill.invertOnDark}
+                    size={32}
+                  />
                   <span className="text-base text-foreground font-medium">{skill.name}</span>
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${
@@ -204,7 +222,13 @@ const Skills = () => {
             <div className="flex flex-wrap gap-8">
               {skills.tools.map((skill) => (
                 <div key={skill.name} className="flex flex-col items-center gap-1 group">
-                  <TechIcon name={skill.name} icon={skill.icon} size={32} />
+                  <TechIcon
+                    name={skill.name}
+                    icon={skill.icon}
+                    iconDark={skill.iconDark}
+                    invertOnDark={skill.invertOnDark}
+                    size={32}
+                  />
                   <span className="text-base text-foreground font-medium">{skill.name}</span>
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${

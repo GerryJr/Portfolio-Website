@@ -75,7 +75,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         <div className="flex items-start gap-x-[1.9px] gap-y-3 mb-3 flex-wrap" role="list" aria-label="Technology stack">
           {visibleIcons.map((tech, idx) => (
             <div key={idx} role="listitem" className="flex flex-col items-center gap-1 w-14">
-              <TechIcon name={tech.name} icon={tech.icon} svgPath={tech.svgPath} size={30} />
+              <TechIcon
+                name={tech.name}
+                icon={tech.icon}
+                iconDark={tech.iconDark}
+                invertOnDark={tech.invertOnDark}
+                svgPath={tech.svgPath}
+                size={30}
+              />
               <span className="text-[11px] text-muted-foreground text-center leading-snug">{tech.name}</span>
             </div>
           ))}

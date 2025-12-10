@@ -9,7 +9,7 @@ import projectStorageTracker from "@/assets/project-sortage-tracker.webp";
 import porjectMortgageTracker from "@/assets/project-mortgage.webp"
 import porjectOrangeCalc from "@/assets/project-orange-calc.png"
 
-const iconAWS = { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" }
+const iconAWS = { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" }
 const iconLambda = { name: "Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" }
 const iconDynamoDB = { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" }
 const iconCognito = { name: "Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" }

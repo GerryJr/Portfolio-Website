@@ -72,7 +72,9 @@ export const skills: SkillCategory = {
     {
       name: "SQLAlchemy",
       years: 1,
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg"
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
+      iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-plain.svg",
+      invertOnDark: true
     },
     {
       name: "Flask",
@@ -84,7 +86,8 @@ export const skills: SkillCategory = {
     {
       name: "AWS",
       years: 2,
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
     },
     {
       name: "Google Cloud",
