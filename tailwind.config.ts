@@ -17,6 +17,14 @@ export default {
         heading: ['Karla', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         body: ['Karla', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
+      boxShadow: {
+        sm: "0 1px 2px 0 hsla(var(--shadow-color) / 0.10)",
+        DEFAULT: "0 8px 24px hsla(var(--shadow-color) / 0.12)",
+        md: "0 10px 30px hsla(var(--shadow-color) / 0.14)",
+        lg: "0 12px 45px hsla(var(--shadow-color) / 0.16)",
+        xl: "0 16px 70px hsla(var(--shadow-color) / 0.18)",
+        "2xl": "0 24px 90px hsla(var(--shadow-color) / 0.20)",
+      },
       colors: {
         border: "hsl(var(--border))",
         "icon-neutral": "hsl(var(--icon-neutral))",

@@ -1,9 +1,15 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const navLinks = useMemo(
     () => [
@@ -17,9 +23,17 @@ export const Navigation = () => {
     []
   );
 
+  const isDark = resolvedTheme === "dark";
+
+  const toggleTheme = () => {
+    setTheme(isDark ? "light" : "dark");
+  };
+
+  const themeLabel = isDark ? "Switch to light mode" : "Switch to dark mode";
+
   const baseLink =
     "relative inline-flex items-center justify-center whitespace-nowrap text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 no-underline " +
-    "after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-[80%] after:bg-black after:rounded-full " +
+    "after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-[80%] after:bg-current after:rounded-full " +
     "after:scale-x-0 after:opacity-0 after:origin-center after:transition-transform after:duration-350 after:ease-[cubic-bezier(0.33,1,0.68,1)] after:content-['']";
   const mobileLink =
     "block w-full text-left text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 no-underline";
@@ -44,7 +58,7 @@ export const Navigation = () => {
                   className={({ isActive }) =>
                     cn(
                       baseLink,
-                      "hover:text-foreground hover:bg-black/5 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                      "hover:text-foreground hover:bg-foreground/10 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                       isActive
                         ? "text-foreground font-semibold after:scale-x-100 after:opacity-100"
                         : "text-muted-foreground"
@@ -61,13 +75,21 @@ export const Navigation = () => {
                   rel="noopener noreferrer"
                   className={cn(
                     baseLink,
-                    "text-muted-foreground hover:text-foreground hover:bg-black/5 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    "text-muted-foreground hover:text-foreground hover:bg-foreground/10 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   )}
                 >
                   {link.label}
                 </a>
               )
             )}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={themeLabel}
+              className="inline-flex items-center justify-center rounded-lg border border-border p-2 text-muted-foreground hover:text-foreground hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors duration-200"
+            >
+              {mounted && isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,8 +138,8 @@ export const Navigation = () => {
                   className={({ isActive }) =>
                     cn(
                       mobileLink,
-                      "text-muted-foreground hover:text-foreground hover:bg-black/5 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                      isActive && "text-foreground font-semibold underline decoration-2 decoration-black underline-offset-4"
+                      "text-muted-foreground hover:text-foreground hover:bg-foreground/10 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                      isActive && "text-foreground font-semibold underline decoration-2 decoration-current underline-offset-4"
                     )
                   }
                 >
@@ -131,7 +153,7 @@ export const Navigation = () => {
                   rel="noopener noreferrer"
                   className={cn(
                     mobileLink,
-                    "text-muted-foreground hover:text-foreground hover:bg-black/5 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    "text-muted-foreground hover:text-foreground hover:bg-foreground/10 hover:-translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -141,6 +163,17 @@ export const Navigation = () => {
                 </a>
               )
             )}
+            <div className="px-3">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                aria-label={themeLabel}
+                className="w-full flex items-center justify-between rounded-lg border border-border px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors duration-200"
+              >
+                <span>{mounted ? (isDark ? "Light mode" : "Dark mode") : "Theme"}</span>
+                {mounted && isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              </button>
+            </div>
           </div>
         </div>
       </div>

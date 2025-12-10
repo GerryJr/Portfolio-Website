@@ -39,6 +39,8 @@ All colors MUST be HSL.
     --icon-neutral: 0 0% 60%;
     --icon-hover: 220 15% 35%;
 
+    --shadow-color: 220 10% 35%;
+
     --radius: 0.375rem;
 
     --sidebar-background: 0 0% 98%;
@@ -89,6 +91,8 @@ All colors MUST be HSL.
 
     --icon-neutral: 0 0% 50%;
     --icon-hover: 220 15% 60%;
+
+    --shadow-color: 0 0% 100%;
 
     --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 95%;
