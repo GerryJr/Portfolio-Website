@@ -157,7 +157,7 @@ const About = () => {
                 loading="lazy"
               />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+            <p className="text-sm text-muted-foreground leading-relaxed mt-3 text-center">
               {aboutData.personalInterests.image.note}
             </p>
           </div>

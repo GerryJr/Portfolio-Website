@@ -19,7 +19,7 @@ export const aboutData = {
     image: {
       src: heroCouple,
       alt: "Gerardo Lopez with fiance",
-      note: ""
+      note: "Me and my fiance Kourtney :)"
     }
   }
 };
