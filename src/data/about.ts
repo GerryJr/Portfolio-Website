@@ -14,12 +14,12 @@ export const aboutData = {
     title: "Personal Hobbies",
     paragraphs: [
       "Outside of work, I love playing video games with my fiance and friends. I play Rocket League and Elden Ring the most, but I'm trying to get into books. I'm not a reader yet, but it's my second year in a row giving it a real shot.",
-      "Also, as nerdy as it sounds, I really enjoy building new programs in my computer to try to make my life easier. Currently, I have am working on my home server so that I can always access to my files and easily share them with friends and family."
+      "Also, as nerdy as it sounds, I really enjoy building new programs in my computer to try to make my life easier. Currently, I am working on my home server so that I can always access to my files and easily share them with friends and family."
     ],
     image: {
       src: heroCouple,
       alt: "Gerardo Lopez with fiance",
-      note: "Me and my fiance Kourtney :)"
+      note: "Me and my fiance :)"
     }
   }
 };

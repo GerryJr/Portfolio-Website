@@ -118,8 +118,8 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "mortage-tracker",
-    title: "Multi-Mortage Tracker",
+    id: "mortgage-tracker",
+    title: "Multi-Mortgage Tracker",
     whatItIs: "A Google Cloud–hosted web app built with React + TypeScript, Python, and MongoDB to track multiple mortgages and share real-time payment status between co-owners.",
     employer: "",
     role: "Solo Developer",
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     challenges: [
       "Designed a Python-to-HTML conversion system that turned user-written Colab code blocks into structured webpages.",
       "Integrated Google Drive API to auto-save project files, ensuring users' work persisted across sessions.",
-      "Created standardized unti testing to validate package functionality and reliability during development.",
+      "Created standardized unit testing to validate package functionality and reliability during development.",
     ],
     impact: "Enabled non-web developers to produce HTML pages from simple Python notebooks, eliminating the need to learn frontend tools.",
     links: {
