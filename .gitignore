@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# LaTeX resume build artifacts
+src/data/resume.*
+!src/data/resume.tex
