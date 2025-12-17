@@ -6,7 +6,7 @@ export interface HomeHighlight {
 export const homeHighlights: HomeHighlight[] = [
   {
     title: "3+ Years Experience",
-    description: "Software Engineering across across research and industry.",
+    description: "Software Engineering across research and industry.",
   },
   {
     title: "10,000+ Students",
