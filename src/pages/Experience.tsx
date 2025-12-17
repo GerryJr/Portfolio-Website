@@ -23,61 +23,6 @@ const Experience = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Education Section */}
-      <section className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">
-          Education
-        </h1>
-        <Accordion type="single" collapsible className="space-y-6">
-          {education.map((edu) => (
-            <AccordionItem key={edu.id} value={edu.id} className="bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 data-[state=open]:scale-[1.02] data-[state=open]:shadow-2xl">
-              <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-accent/5 group">
-                <div className="w-full text-left">
-                  <div className="flex items-center gap-6 w-full">
-                    <img 
-                      src={edu.logo} 
-                      alt={`${edu.institution} Logo`} 
-                      className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
-                      loading="eager"
-                      fetchPriority="high"
-                    />
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-center flex-1 gap-2">
-                      <div>
-                        <h2 className="text-2xl font-semibold text-foreground">{edu.title}</h2>
-                        <p className="text-xl text-accent font-medium">{edu.institution}</p>
-                        <p className="text-base text-muted-foreground mt-1">{edu.location}</p>
-                      </div>
-                      <span className="text-muted-foreground font-light md:mr-8">{edu.date}</span>
-                    </div>
-                  </div>
-                  <div className="ml-0 md:ml-22 mt-4 space-y-1.5 text-base text-foreground/70 transition-all duration-300 overflow-hidden group-data-[state=open]:opacity-0 group-data-[state=open]:max-h-0 group-data-[state=open]:mt-0 max-h-40">
-                    {edu.summary.map((item, idx) => (
-                      <p key={idx}>• {item}</p>
-                    ))}
-                  </div>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="px-8 pb-6 animate-fade-in">
-                <img 
-                  src={edu.hero} 
-                  alt={edu.institution} 
-                  className="w-full h-48 md:h-64 object-cover rounded-lg mb-6"
-                  loading="eager"
-                />
-                <div className="space-y-6 text-lg">
-                  {edu.details.map((detail, idx) => (
-                    <div key={idx}>
-                      <p className="text-foreground font-bold text-xl mb-3">{detail.title}</p>
-                      <p className="text-foreground">{detail.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </section>
-
       {/* Work Experience Section */}
       <section>
         <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">
@@ -134,6 +79,61 @@ const Experience = () => {
                       ))}
                     </div>
                   </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
+
+      {/* Education Section */}
+      <section className="mb-20">
+        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">
+          Education
+        </h1>
+        <Accordion type="single" collapsible className="space-y-6">
+          {education.map((edu) => (
+            <AccordionItem key={edu.id} value={edu.id} className="bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 data-[state=open]:scale-[1.02] data-[state=open]:shadow-2xl">
+              <AccordionTrigger className="px-8 py-6 hover:no-underline hover:bg-accent/5 group">
+                <div className="w-full text-left">
+                  <div className="flex items-center gap-6 w-full">
+                    <img 
+                      src={edu.logo} 
+                      alt={`${edu.institution} Logo`} 
+                      className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
+                      loading="eager"
+                      fetchPriority="high"
+                    />
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-center flex-1 gap-2">
+                      <div>
+                        <h2 className="text-2xl font-semibold text-foreground">{edu.title}</h2>
+                        <p className="text-xl text-accent font-medium">{edu.institution}</p>
+                        <p className="text-base text-muted-foreground mt-1">{edu.location}</p>
+                      </div>
+                      <span className="text-muted-foreground font-light md:mr-8">{edu.date}</span>
+                    </div>
+                  </div>
+                  <div className="ml-0 md:ml-22 mt-4 space-y-1.5 text-base text-foreground/70 transition-all duration-300 overflow-hidden group-data-[state=open]:opacity-0 group-data-[state=open]:max-h-0 group-data-[state=open]:mt-0 max-h-40">
+                    {edu.summary.map((item, idx) => (
+                      <p key={idx}>• {item}</p>
+                    ))}
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="px-8 pb-6 animate-fade-in">
+                <img 
+                  src={edu.hero} 
+                  alt={edu.institution} 
+                  className="w-full h-48 md:h-64 object-cover rounded-lg mb-6"
+                  loading="eager"
+                />
+                <div className="space-y-6 text-lg">
+                  {edu.details.map((detail, idx) => (
+                    <div key={idx}>
+                      <p className="text-foreground font-bold text-xl mb-3">{detail.title}</p>
+                      <p className="text-foreground">{detail.description}</p>
+                    </div>
+                  ))}
                 </div>
               </AccordionContent>
             </AccordionItem>

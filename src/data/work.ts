@@ -19,7 +19,7 @@ export const workExperience: WorkExperience[] = [
     id: "dll",
     logo: logoDLL,
     hero: heroDLL,
-    title: "AWS Full Stack Developer",
+    title: "Software Engineer",
     company: "Digital Learning Lab",
     location: "Irvine, CA",
     dateRange: "Jan 2024 – Present",

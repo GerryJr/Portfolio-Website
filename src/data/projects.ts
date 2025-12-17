@@ -17,7 +17,7 @@ export const projects: Project[] = [
     title: "Website Integration with Canvas",
     whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational app using LTI 1.3 handshake.",
     employer: "Digital Learning Lab",
-    role: "AWS Full Stack Developer",
+    role: "Software Engineer",
     date: "Jun 2025 - Present",
     image: projectLtiCanvas,
     stackIcons: [
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     title: "RAG + LLM Tester Tool",
     whatItIs: "An internal research platform enabling large-scale testing of 5,000+ of prompts across 40+ LLMs, with Retrieval-Augmented Generation (RAG) as an add-on.",
     employer: "Digital Learning Lab",
-    role: "AWS Full-Stack Developer",
+    role: "Software Engineer",
     date: "Jul 2024 - May 2025",
     image: projectLLMTester,
     stackIcons: [
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     title: "PapyrusAI Data Extraction",
     whatItIs: "A data extraction pipeline that optimizes for DynamoDB tables into downloadable CSVs, aggregating millions of messages for analysis.",
     employer: "Digital Learning Lab",
-    role: "AWS Full-Stack Developer",
+    role: "Software Engineer",
     date: "Mar 2024 - Jun 2024",
     image: projectPapyrusAI,
     stackIcons: [
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     title: "Stress Testing Custom APIs",
     whatItIs: "A Python-driven load testing pipeline that ran smoke, stress, spike, and soak tests on AWS APIs, with R used to graph performance metrics and bottlenecks.",
     employer: "Digital Learning Lab",
-    role: "AWS Full Stack Developer",
+    role: "Software Engineer",
     date: "Jan 2024 - Feb 2024",
     image: projectEtlPipeline,
     stackIcons: [
