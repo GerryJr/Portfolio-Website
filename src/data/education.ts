@@ -21,7 +21,7 @@ export const education: Education[] = [
     details: [
       {
         title: "Bachelor of Science in Mathematics",
-        description: "Relative Courseork: Algorithms & Data Structures, Optimization, Statistical Modeling, Linear Algebra, Differential Equations, Abstract Algebra"
+        description: "Relative Coursework: Algorithms & Data Structures, Optimization, Statistical Modeling, Linear Algebra, Differential Equations, Abstract Algebra"
       },
       {
         title: "Co-Author of 2025 Peer-Reviewed Article",

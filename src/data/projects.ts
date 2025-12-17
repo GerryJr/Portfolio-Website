@@ -5,9 +5,9 @@ import projectResearchPlatform from "@/assets/project-research-platform.png";
 import projectEtlPipeline from "@/assets/project-etl-pipeline.webp";
 import projectPapyrusAI from "@/assets/project-papyrusai.webp";
 import projectPython2Html from "@/assets/project-webpage-creation.png";
-import projectStorageTracker from "@/assets/project-sortage-tracker.webp";
-import porjectMortgageTracker from "@/assets/project-mortgage.webp";
-import porjectOrangeCalc from "@/assets/project-orange-calc.png";
+import projectStorageTracker from "@/assets/project-storage-tracker.webp";
+import projectMortgageTracker from "@/assets/project-mortgage.webp";
+import projectOrangeCalc from "@/assets/project-orange-calc.png";
 import { icons } from "./icons";
 
 
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     employer: "",
     role: "Solo Developer",
     date: "Oct 2023 - Feb 2024",
-    image: porjectMortgageTracker,
+    image: projectMortgageTracker,
     stackIcons: [
       icons.googlecloud, icons.python, icons.mongodb, icons.react, icons.typescript, icons.html
     ],
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     employer: "",
     role: "Solo Developer",
     date: "Jun 2022 - Jan 2023",
-    image: porjectOrangeCalc,
+    image: projectOrangeCalc,
     stackIcons: [
       icons.streamlit, icons.python, icons.html
     ],
