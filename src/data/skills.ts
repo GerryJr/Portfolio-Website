@@ -5,6 +5,7 @@ const languages = [
   icons.python,
   icons.typescript,
   icons.javascript,
+  icons.csharp,
   icons.r,
   icons.html,
   icons.css,

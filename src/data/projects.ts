@@ -35,7 +35,7 @@ export const projects: Project[] = [
   },
   {
     id: "custom-wms",
-    title: "Custom Warehouse Management System",
+    title: "Custom Inventory & Data Management System (Web + Mobile)",
     whatItIs: "Commissioned web and mobile system for a Virginia warehouse, enabling NFC item tracking and admin control.",
     employer: "",
     role: "Solo Developer",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     ],
     impact: "Accelerated warehouse operations and improved accuracy with unified mobile scanning and web-based admin tools.",
     links: {
-      private: "Under Development"
+      live: "https://www.wakeline.info"
     },
   },
   {

@@ -57,13 +57,13 @@
 \noindent\begin{tabularx}{\textwidth}{@{}X r@{}}
 {\LARGE \textbf{Gerardo Lopez Jr.}} &
 {\small
+\href{tel:+16614745788}{(661) 474-5788} \;|\;
 \href{https://gerryjr.dev}{gerryjr.dev} \;|\;
 \href{mailto:gerardolopezjr1178@gmail.com}{gerardolopezjr1178@gmail.com}
 } \\
 [1pt]
 {\large Software Engineer \textcolor{meta}{\;|\;} Backend \& Data} &
 {\small
-% Optional (recommended for applications): \href{tel:+1XXXXXXXXXX}{(XXX) XXX-XXXX} \;|\;
 \href{https://linkedin.com/in/gerryjr}{linkedin.com/in/gerryjr} \;|\;
 \href{https://github.com/gerryjr}{github.com/gerryjr}
 } \\
@@ -77,8 +77,8 @@
 
 \roleblock{Software Engineer}{Jan 2024 -- Present}{\href{https://www.digitallearninglab.org/}{\textit{Digital Learning Lab}}}{Irvine, CA}{Full-time}
 \begin{resumeItemize}
-  \item Reduced DynamoDB query runtime from 30 minutes to 3 seconds by redesigning NoSQL access patterns to retrieve only relevant items from the largest tables using targeted filters.
-  \item Cut Lambda compute cost 60\% month-over-month by eliminating long-running download jobs and optimizing batching/pagination by enforcing required frontend filters.
+  \item Designed backend data access patterns and ETL-style data flows (NoSQL) to support large-scale data retrieval, reducing query runtimes from 30 minutes to 3 seconds while improving data accuracy and consistency.
+  \item Reduced backend Lambda execution time by redesigning batch-processing and pagination logic for large datasets, resulting in a 60\% reduction in compute costs.
   \item Built an LLM evaluation platform enabling researchers to run 10,000+ messages from a CSV across 40+ models, exporting structured results and saving hours per study.
   \item Implemented Canvas LTI 1.3 launches and SSO using TypeScript and AWS (API Gateway, Cognito/OAuth, JWT, DynamoDB multi-tenant), enabling seamless access from Canvas across institutions.
   \item Served as release owner/on-call: approved merges, ran code reviews, and authored onboarding \mbox{documentation} (engineers and non-technical IT) for new institution rollouts.
@@ -87,7 +87,7 @@
 
 \roleblock{Data Analyst}{Jan 2024 -- Nov 2024}{\href{https://sites.uci.edu/cpleads/}{\textit{CP-LEADS}}}{Irvine, CA}{Part-time}
 \begin{resumeItemize}
-  \item Analyzed 100,000+ student messages (60 controlled users; 2 classrooms) with topic modeling and sentiment analysis (Python/R), surfacing guidance that helped instructors teach effective AI usage.
+  \item Parsed and analyzed 100,000+ student messages (60 controlled users; 2 classrooms) with topic modeling and sentiment analysis (Python/R), surfacing guidance that helped instructors teach effective AI usage.
   \item Co-authored publication in \textit{Computer Science Education} (DOI: \href{https://doi.org/10.1080/08993408.2024.2396749}{10.1080/08993408.2024.2396749}).
 \end{resumeItemize}
 \vspace{3pt}
@@ -107,9 +107,9 @@
 % ---------- Selected Projects ----------
 \section{Selected Projects}
 
-\projectblock{Custom Warehouse Management System (Commissioned; Web + Mobile)}{Aug 2025 -- Present}
+\projectblock{Custom Inventory \& Data Management System (Web + Mobile)}{Aug 2025 -- Present}
 \begin{resumeItemize}
-  \item Built NFC-driven inventory tracking for a Virginia warehouse (Expo/React Native + React/TypeScript + \mbox{Supabase}), supporting 1,000+ scans/day and reducing lost-item risk tied to multi-million-dollar contracts.
+  \item Built a backend-driven inventory system (Expo/React Native, React/TypeScript, Supabase) emphasizing data accuracy, reconciliation, and auditability across high-volume NFC scan events (1,000+ scans/day).
 \end{resumeItemize}
 \vspace{2pt}
 
@@ -120,7 +120,7 @@
 
 % ---------- Technical Skills ----------
 \section{Technical Skills}
-\textbf{Languages:} Python, TypeScript/JavaScript, SQL, R \\
+\textbf{Languages:} Python, TypeScript/JavaScript, SQL (PostgreSQL, DynamoDB), C\#, R \\
 \textbf{Cloud/Backend:} AWS (Lambda, DynamoDB, API Gateway, Cognito, S3, Bedrock), AWS CDK, Docker \\
 \textbf{Data \& Testing:} pandas, NumPy, ggplot2, unit testing, performance/load testing \\
 \textbf{Tools:} Git, GitHub, Postman, CloudWatch
@@ -128,7 +128,7 @@
 % ---------- Education ----------
 \section{Education}
 \twocol{\textbf{University of California, Irvine}}{\textcolor{meta}{Irvine, CA}}
-\twocol{B.S. Mathematics \textcolor{meta}{\;|\;} AI in Education Research}{\textcolor{meta}{Expected Sep 2026}}
+\twocol{B.S. Mathematics \textcolor{meta}{\;|\;} AI in Education Research}{\textcolor{meta}{Expected (part-time) Sep 2026}}
 \textbf{Coursework:} Data Structures \& Algorithms; Statistical Modeling; Linear Algebra; APIs/Sockets/Protocols
 
 % ---------- Certifications ----------
