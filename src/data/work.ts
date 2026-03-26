@@ -22,7 +22,7 @@ export const workExperience: WorkExperience[] = [
     title: "Software Engineer",
     company: "Digital Learning Lab",
     location: "Irvine, CA",
-    dateRange: "Jan 2024 – Present",
+    dateRange: "Jan 2024 – Jan 2026",
     summary: [
       "Connected PapyrusAI to Canvas via secure LTI 1.3 integration used across school districts.",
       "Built an internal RAG + LLM testing tool that scaled AI experiments across dozens of models.",
