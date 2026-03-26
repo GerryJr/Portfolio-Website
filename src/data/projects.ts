@@ -64,7 +64,7 @@ export const projects: Project[] = [
     whatItIs: "Secure learning tool integration enabling course data exchange between Canvas LMS and third-party educational app using LTI 1.3 handshake.",
     employer: "Digital Learning Lab",
     role: "Software Engineer",
-    date: "Jun 2025 - Present",
+    date: "Jun 2025 - Jan 2026",
     image: projectLtiCanvas,
     stackIcons: [
       icons.aws, icons.typescript, icons.nodejs, icons.cdk, icons.lambda, icons.dynamodb, icons.cognito, icons.gateway, icons.cloudwatch, icons.postman, icons.docker, icons.react, icons.html
