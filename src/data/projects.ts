@@ -8,10 +8,56 @@ import projectPython2Html from "@/assets/project-webpage-creation.png";
 import projectStorageTracker from "@/assets/project-storage-tracker.webp";
 import projectMortgageTracker from "@/assets/project-mortgage.webp";
 import projectOrangeCalc from "@/assets/project-orange-calc.png";
+import projectCultivateFitness from "@/assets/project-cultivate-fitness.png";
+import projectClooless from "@/assets/project-clooless.png";
 import { icons } from "./icons";
 
 
 export const projects: Project[] = [
+  {
+    id: "clooless-fan-site",
+    title: "Clooless Streamer Tribute Site",
+    whatItIs: "A fan-built interactive website for the Clooless crew (4.6M+ YouTube subscribers) featuring scroll-driven canvas animations, live Twitch status, and a Cloudflare Workers data layer.",
+    employer: "",
+    role: "Solo Developer",
+    date: "Mar 2026 - Present",
+    image: projectClooless,
+    stackIcons: [
+      icons.typescript, icons.cloudflare, icons.vitejs, icons.html, icons.css, icons.javascript,
+    ],
+    challenges: [
+      "Built a scroll-driven storytelling engine that renders frame sequences on canvas with overlay transitions and progress tracking.",
+      "Created a Cloudflare Worker with cron-tiered data fetching for Twitch live status, YouTube RSS, and rolling video stats across 7 channels.",
+      "Designed a multi-page Vite build with per-creator pages, a network stats dashboard, and cross-page view transitions.",
+      "Implemented a manifest-driven site renderer that generates all content sections, stats panels, and YouTube feeds from a single config.",
+    ],
+    impact: "Shipped a polished fan tribute with real-time Twitch and YouTube integration, serving content for creators with a combined 4.6M+ subscribers and 2.1M+ Twitch followers.",
+    links: {
+      live: "https://clooless.dev"
+    },
+  },
+  {
+    id: "cultivate-fitness",
+    title: "Cultivate Fitness (Website + Mobile App)",
+    whatItIs: "A commissioned fitness platform pairing a React coaching website with Stripe payments and Cal.com booking alongside an Expo mobile app for workout planning, nutrition tracking, and coach-client messaging.",
+    employer: "",
+    role: "Solo Developer",
+    date: "Feb 2026 - Present",
+    image: projectCultivateFitness,
+    stackIcons: [
+      icons.react, icons.expo, icons.typescript, icons.supabase, icons.vercel, icons.redis, icons.sqlite, icons.zustand, icons.framerMotion, icons.tailwindcss, icons.vitejs, icons.html, icons.css,
+    ],
+    challenges: [
+      "Built a Stripe-powered checkout flow with webhook-driven token delivery, Redis-backed rate limiting, and Brevo transactional emails.",
+      "Developed an offline-first Expo app using SQLite and a custom sync engine to queue workouts and sync with Supabase on reconnect.",
+      "Implemented a coach dashboard with plan builder, client check-ins, block library, and real-time messaging via Supabase Realtime.",
+      "Integrated Apple HealthKit and Android Health Connect for automatic activity logging and device-synced progress tracking.",
+    ],
+    impact: "Launched a full-stack fitness platform connecting coaches and clients through personalized workout plans, payment processing, and cross-device health tracking.",
+    links: {
+      live: "https://kristen.fitness"
+    },
+  },
   {
     id: "lti-canvas-integration",
     title: "Website Integration with Canvas",
@@ -36,20 +82,21 @@ export const projects: Project[] = [
   {
     id: "custom-wms",
     title: "Custom Inventory & Data Management System (Web + Mobile)",
-    whatItIs: "Commissioned web and mobile system for a Virginia warehouse, enabling NFC item tracking and admin control.",
+    whatItIs: "Multi-tenant warehouse management platform with a React web app and Expo mobile scanner, built for a Virginia facility with NFC tracking and CMMC-compliant security.",
     employer: "",
     role: "Solo Developer",
-    date: "Aug 2025 - Present",
+    date: "Aug 2025 - Mar 2026",
     image: projectStorageTracker,
     stackIcons: [
-      icons.expo, icons.supabase, icons.react, icons.typescript, icons.html,
+      icons.react, icons.expo, icons.typescript, icons.supabase, icons.tailwindcss, icons.vitejs, icons.sentry, icons.playwright, icons.vitest, icons.githubActions, icons.html,
     ],
     challenges: [
-      "Built real-time inventory syncing with Supabase for scans, NFC events, and updates.",
-      "Developed offline-ready Expo and React interfaces using fast TypeScript workflows.",
-      "Implemented secure role access and event logging using Supabase policies.",
+      "Architected multi-tenant isolation with per-org Supabase clients and CMMC Level 2 compliant MFA enrollment.",
+      "Built a dedicated admin console for organization management, user provisioning, and analytics reporting.",
+      "Developed CI/CD with GitHub Actions running linting, typechecks, Vitest unit tests, and Playwright E2E flows.",
+      "Created an offline-ready Expo mobile app with NFC scanning, role-based access, and real-time inventory syncing.",
     ],
-    impact: "Accelerated warehouse operations and improved accuracy with unified mobile scanning and web-based admin tools.",
+    impact: "Delivered a production-ready warehouse system with multi-tenant auth, MFA security, and unified web and mobile interfaces that replaced manual tracking workflows.",
     links: {
       live: "https://www.wakeline.info"
     },
@@ -120,7 +167,7 @@ export const projects: Project[] = [
   {
     id: "mortgage-tracker",
     title: "Multi-Mortgage Tracker",
-    whatItIs: "A Google Cloud–hosted web app built with React + TypeScript, Python, and MongoDB to track multiple mortgages and share real-time payment status between co-owners.",
+    whatItIs: "A Google Cloud hosted web app built with React + TypeScript, Python, and MongoDB to track multiple mortgages and share real-time payment status between co-owners.",
     employer: "",
     role: "Solo Developer",
     date: "Oct 2023 - Feb 2024",

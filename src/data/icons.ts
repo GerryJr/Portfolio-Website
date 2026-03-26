@@ -69,6 +69,38 @@ export const icons = {
   rstudio: { name: "RStudio", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg", years: 2 },
   solidworks: { name: "SolidWorks", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidworks/solidworks-plain.svg", years: 3 },
   wix: { name: "Wix", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wix/wix-original.svg", years: 2 },
+
+  tailwindcss: { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", years: 1 },
+  vitejs: { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg", years: 1 },
+  cloudflare: {
+    name: "Cloudflare",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+    iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+  },
+  vercel: {
+    name: "Vercel",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+    iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+    invertOnDark: true,
+  },
+  sentry: {
+    name: "Sentry",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sentry/sentry-original.svg",
+    invertOnDark: true,
+  },
+  playwright: { name: "Playwright", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" },
+  vitest: { name: "Vitest", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg" },
+  sqlite: { name: "SQLite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" },
+  zustand: { name: "Zustand", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg" },
+  stripe: { name: "Stripe", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/stripe/stripe-original.svg" },
+  reactNative: { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", years: 1 },
+  framerMotion: {
+    name: "Framer Motion",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+    iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+    invertOnDark: true,
+  },
+  zod: { name: "Zod", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zod/zod-original.svg" },
 } satisfies Record<string, IconAsset>;
 
 export type IconKey = keyof typeof icons;
