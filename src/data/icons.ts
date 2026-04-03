@@ -92,7 +92,7 @@ export const icons = {
   vitest: { name: "Vitest", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitest/vitest-original.svg" },
   sqlite: { name: "SQLite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" },
   zustand: { name: "Zustand", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zustand/zustand-original.svg" },
-  stripe: { name: "Stripe", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/stripe/stripe-original.svg" },
+  stripe: { name: "Stripe", icon: "https://cdn.simpleicons.org/stripe/635BFF" },
   reactNative: { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", years: 1 },
   framerMotion: {
     name: "Framer Motion",
@@ -101,6 +101,52 @@ export const icons = {
     invertOnDark: true,
   },
   zod: { name: "Zod", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/zod/zod-original.svg" },
+  cloudflareWorkersKv: { name: "Cloudflare KV",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+    iconDark: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+  },
+} satisfies Record<string, IconAsset>;
+
+/** API / service icons for the "APIs & Scope" card view. */
+export const apiIcons = {
+  twitchApi: { name: "Twitch API", icon: "https://cdn.simpleicons.org/twitch/9146FF" },
+  youtubeRss: { name: "YouTube RSS", icon: "https://cdn.simpleicons.org/youtube/FF0000" },
+  youtubeData: { name: "YouTube Data API", icon: "https://cdn.simpleicons.org/youtube/FF0000" },
+  cloudflareWorkers: { name: "Cloudflare Workers", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg" },
+  stripeApi: { name: "Stripe API", icon: "https://cdn.simpleicons.org/stripe/635BFF" },
+  calcom: { name: "Cal.com", icon: "https://cdn.simpleicons.org/caldotcom/292929", iconDark: "https://cdn.simpleicons.org/caldotcom/FFFFFF" },
+  supabaseRealtime: { name: "Supabase Realtime", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
+  supabaseAuth: { name: "Supabase Auth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
+  appleHealthKit: { name: "Apple HealthKit", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg", invertOnDark: true },
+  androidHealth: { name: "Health Connect", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" },
+  brevoApi: { name: "Brevo API", icon: "https://cdn.simpleicons.org/brevo/0B996E" },
+  canvasLti: { name: "Canvas LTI 1.3", icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/instructure.svg" },
+  awsGateway: { name: "AWS API Gateway", icon: "https://icon.icepanel.io/AWS/svg/App-Integration/API-Gateway.svg" },
+  awsCognito: { name: "Amazon Cognito", icon: "https://icon.icepanel.io/AWS/svg/Security-Identity-Compliance/Cognito.svg" },
+  awsDynamodb: { name: "Amazon DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
+  awsLambda: { name: "AWS Lambda", icon: "https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg" },
+  awsCloudwatch: { name: "Amazon CloudWatch", icon: "https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg" },
+  awsBedrock: { name: "AWS Bedrock", icon: "https://www.awsicon.com/static/images/Service-Icons/Artificial-Intelligence/16/svg/Bedrock.svg" },
+  awsS3: { name: "Amazon S3", icon: "https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg" },
+  openaiApi: { name: "OpenAI API", icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/openai.svg", invertOnDark: true },
+  anthropicApi: { name: "Anthropic API", icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/anthropic.svg", invertOnDark: true },
+  sentrySdk: { name: "Sentry SDK", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sentry/sentry-original.svg", invertOnDark: true },
+  nfcApi: { name: "NFC", icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@latest/icons/nfc.svg", invertOnDark: true },
+  githubActionsApi: { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", invertOnDark: true },
+  googleCloudRun: { name: "Cloud Run", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
+  mongodbAtlas: { name: "MongoDB Atlas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+  googleCloudStorage: { name: "Cloud Storage", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
+  googleDriveApi: { name: "Google Drive API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" },
+  googleColabApi: { name: "Google Colab API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg" },
+  streamlitApi: { name: "Streamlit API", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" },
+} satisfies Record<string, IconAsset>;
+
+/** Database icons for the "APIs & Scope" card view. */
+export const dbIcons = {
+  postgresql: { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+  sqlite: { name: "SQLite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" },
+  dynamodb: { name: "DynamoDB", icon: "https://icon.icepanel.io/AWS/svg/Database/DynamoDB.svg" },
+  mongodb: { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
 } satisfies Record<string, IconAsset>;
 
 export type IconKey = keyof typeof icons;

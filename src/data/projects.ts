@@ -10,7 +10,7 @@ import projectMortgageTracker from "@/assets/project-mortgage.webp";
 import projectOrangeCalc from "@/assets/project-orange-calc.png";
 import projectCultivateFitness from "@/assets/project-cultivate-fitness.png";
 import projectClooless from "@/assets/project-clooless.png";
-import { icons } from "./icons";
+import { icons, apiIcons, dbIcons } from "./icons";
 
 
 export const projects: Project[] = [
@@ -25,6 +25,18 @@ export const projects: Project[] = [
     stackIcons: [
       icons.typescript, icons.cloudflare, icons.vitejs, icons.html, icons.css, icons.javascript,
     ],
+    apis: [
+      { ...apiIcons.twitchApi, purpose: "Shows which streamers are currently live" },
+      { ...apiIcons.youtubeData, name: "YouTube API", purpose: "Fetches video uploads, subscriber counts, and channel statistics" },
+    ],
+    integrations: [],
+    databases: [
+      { ...icons.cloudflareWorkersKv, type: "Non-Relational" },
+    ],
+    tags: ["JavaScript", "Cloudflare"],
+    teamSize: "Solo",
+    scopeType: "Full Stack",
+    recruiterSummary: "I built everything from scratch — the website visitors see, the animations they interact with, and the server that automatically fetches live data from Twitch and YouTube behind the scenes.",
     challenges: [
       "Built a scroll-driven storytelling engine that renders frame sequences on canvas with overlay transitions and progress tracking.",
       "Created a Cloudflare Worker with cron-tiered data fetching for Twitch live status, YouTube RSS, and rolling video stats across 7 channels.",
@@ -45,8 +57,25 @@ export const projects: Project[] = [
     date: "Feb 2026 - Present",
     image: projectCultivateFitness,
     stackIcons: [
-      icons.react, icons.expo, icons.typescript, icons.supabase, icons.vercel, icons.redis, icons.sqlite, icons.zustand, icons.framerMotion, icons.tailwindcss, icons.vitejs, icons.html, icons.css,
+      icons.react, icons.expo, icons.typescript, icons.supabase, icons.vercel, icons.redis, icons.sqlite, icons.tailwindcss, icons.html, icons.css,
     ],
+    apis: [
+      { ...apiIcons.stripeApi, purpose: "Handles customer payments and subscriptions" },
+      { ...apiIcons.calcom, purpose: "Lets clients book coaching sessions online" },
+      { ...apiIcons.brevoApi, purpose: "Sends automated confirmation and receipt emails" },
+    ],
+    integrations: [
+      { ...apiIcons.appleHealthKit, purpose: "Syncs workout data from iPhones and Apple Watch" },
+      { ...apiIcons.androidHealth, purpose: "Syncs workout data from Android devices" },
+    ],
+    databases: [
+      { ...dbIcons.postgresql, type: "Relational", name: "PostgreSQL (Supabase)" },
+      { ...dbIcons.sqlite, type: "Relational" },
+    ],
+    tags: ["React", "JavaScript", "Supabase", "Mobile"],
+    teamSize: "Solo",
+    scopeType: "Full Stack",
+    recruiterSummary: "I designed and built the entire product — a marketing website with payment processing, a mobile app for iOS and Android, and the database and server infrastructure connecting everything together.",
     challenges: [
       "Built a Stripe-powered checkout flow with webhook-driven token delivery, Redis-backed rate limiting, and Brevo transactional emails.",
       "Developed an offline-first Expo app using SQLite and a custom sync engine to queue workouts and sync with Supabase on reconnect.",
@@ -69,6 +98,17 @@ export const projects: Project[] = [
     stackIcons: [
       icons.aws, icons.typescript, icons.nodejs, icons.cdk, icons.lambda, icons.dynamodb, icons.cognito, icons.gateway, icons.cloudwatch, icons.postman, icons.docker, icons.react, icons.html
     ],
+    apis: [],
+    integrations: [
+      { ...apiIcons.canvasLti, purpose: "Securely connects our app inside the Canvas classroom platform" },
+    ],
+    databases: [
+      { ...dbIcons.dynamodb, type: "Non-Relational" },
+    ],
+    tags: ["AWS", "JavaScript", "React"],
+    teamSize: "Team",
+    scopeType: "Full Stack",
+    recruiterSummary: "I built both the user-facing screens teachers interact with and the cloud infrastructure that securely passes student data between Canvas and our application across multiple school districts.",
     challenges: [
       "Coordinated with an external contractor to deliver a secure, compliant LTI 1.3 integration.",
       "Built multi-tenant data isolation in DynamoDB using Lambda functions across multiple institutions.",
@@ -90,6 +130,17 @@ export const projects: Project[] = [
     stackIcons: [
       icons.react, icons.expo, icons.typescript, icons.supabase, icons.tailwindcss, icons.vitejs, icons.sentry, icons.playwright, icons.vitest, icons.githubActions, icons.html,
     ],
+    apis: [],
+    integrations: [
+      { ...apiIcons.nfcApi, purpose: "Scans physical NFC tags on inventory items with a phone" },
+    ],
+    databases: [
+      { ...dbIcons.postgresql, type: "Relational", name: "PostgreSQL (Supabase)" },
+    ],
+    tags: ["React", "JavaScript", "Supabase", "Mobile"],
+    teamSize: "Solo",
+    scopeType: "Full Stack",
+    recruiterSummary: "I built the complete system from end to end — a web dashboard for managers, a mobile scanning app for warehouse floor staff, the database, user login system, and the automated testing pipeline.",
     challenges: [
       "Architected multi-tenant isolation with per-org Supabase clients and CMMC Level 2 compliant MFA enrollment.",
       "Built a dedicated admin console for organization management, user provisioning, and analytics reporting.",
@@ -112,6 +163,19 @@ export const projects: Project[] = [
     stackIcons: [
       icons.aws, icons.python, icons.typescript, icons.nodejs, icons.cdk, icons.s3, icons.lambda, icons.bedrock, icons.postman, icons.gateway, icons.cloudwatch, icons.cognito, icons.docker, icons.react, icons.html
     ],
+    apis: [
+      { ...apiIcons.openaiApi, purpose: "Sends prompts to OpenAI's ChatGPT models for testing" },
+      { ...apiIcons.anthropicApi, purpose: "Sends prompts to Anthropic's Claude models for testing" },
+      { ...apiIcons.awsBedrock, purpose: "Connects to Amazon's AI models for running test prompts" },
+    ],
+    integrations: [],
+    databases: [
+      { ...dbIcons.dynamodb, type: "Non-Relational" },
+    ],
+    tags: ["AWS", "Python", "JavaScript", "React"],
+    teamSize: "Solo",
+    scopeType: "Full Stack",
+    recruiterSummary: "I independently designed and built the entire platform — the interface researchers use to run tests, the cloud servers that process thousands of AI prompts, and the data storage that keeps everything organized.",
     challenges: [
       "Independently architected a scalable AWS backend using CDK for fast, trackable development.",
       "Managed high-volume data flow, returning structured outputs to the frontend for researcher analysis.",
@@ -133,6 +197,15 @@ export const projects: Project[] = [
     stackIcons: [
       icons.aws, icons.python, icons.pandas, icons.cdk, icons.lambda, icons.dynamodb, icons.postman, icons.gateway, icons.cloudwatch
     ],
+    apis: [],
+    integrations: [],
+    databases: [
+      { ...dbIcons.dynamodb, type: "Non-Relational" },
+    ],
+    tags: ["AWS", "Python"],
+    teamSize: "Team",
+    scopeType: "Backend",
+    recruiterSummary: "I focused on the behind-the-scenes server work — building the automated pipeline that pulls millions of records from the database, processes them, and packages them into downloadable files. No user-facing screens were part of my scope.",
     challenges: [
       "First time building CDK infrastructure to allow multiple developers to deploy Lambda services safely to production.",
       "Processed millions of DynamoDB records using Python and Pandas with batched reads, pagination, and CloudWatch-guided performance tuning.",
@@ -154,6 +227,13 @@ export const projects: Project[] = [
     stackIcons: [
       icons.python, icons.pandas, icons.postman, icons.r, icons.gateway, icons.cloudwatch
     ],
+    apis: [],
+    integrations: [],
+    databases: [],
+    tags: ["AWS", "Python", "R"],
+    teamSize: "Solo",
+    scopeType: "Backend",
+    recruiterSummary: "I built the testing tools and scripts that simulate heavy user traffic hitting our servers — this was purely behind-the-scenes infrastructure work to make sure the system could handle real-world demand.",
     challenges: [
       "Developed async Python stress tests that emulated real-world concurrency against AWS API endpoints and related services.",
       "Captured and stored detailed latency and throughput data across thousands of test requests.",
@@ -175,6 +255,15 @@ export const projects: Project[] = [
     stackIcons: [
       icons.googlecloud, icons.python, icons.mongodb, icons.react, icons.typescript, icons.html
     ],
+    apis: [],
+    integrations: [],
+    databases: [
+      { ...dbIcons.mongodb, type: "Non-Relational" },
+    ],
+    tags: ["Google Cloud", "Python", "JavaScript", "React"],
+    teamSize: "Solo",
+    scopeType: "Full Stack",
+    recruiterSummary: "I built the complete application — the website interface where users view their mortgages, the server that calculates payment projections, and the database that stores everything securely.",
     challenges: [
       "Designed a MongoDB schema to support multiple mortgages per user while safely sharing views with co-owners.",
       "Built Python backend services on Google Cloud to compute amortization, remaining balance, and payment projections.",
@@ -196,6 +285,15 @@ export const projects: Project[] = [
     stackIcons: [
       icons.r, icons.python, icons.pandas, icons.dynamodb,
     ],
+    apis: [],
+    integrations: [],
+    databases: [
+      { ...dbIcons.dynamodb, type: "Non-Relational" },
+    ],
+    tags: ["Python", "R", "AWS"],
+    teamSize: "Solo",
+    scopeType: "Data",
+    recruiterSummary: "I worked with data, not user interfaces — I wrote scripts that pulled millions of messages from a database, cleaned them up, ran statistical analysis, and produced visual reports that helped researchers understand user behavior patterns.",
     challenges: [
       "Used Python and Pandas to clean and preprocess large-scale DynamoDB exports for downstream NLP analysis.",
       "Applied R-based topic modeling to uncover recurring themes and visualize message patterns across courses.",
@@ -217,6 +315,17 @@ export const projects: Project[] = [
     stackIcons: [
       icons.googleApi, icons.python, icons.googleColab, icons.html
     ],
+    apis: [
+      { ...apiIcons.googleDriveApi, purpose: "Automatically saves user projects to their Google Drive" },
+    ],
+    integrations: [
+      { ...apiIcons.googleColabApi, purpose: "Runs the Python code inside Google's notebook environment" },
+    ],
+    databases: [],
+    tags: ["Python", "Google Cloud"],
+    teamSize: "Team",
+    scopeType: "Backend",
+    recruiterSummary: "I built the engine behind the scenes — a Python library that converts code into web pages and saves them automatically. Users interact with Google's notebook tool; my code does the heavy lifting underneath.",
     challenges: [
       "Designed a Python-to-HTML conversion system that turned user-written Colab code blocks into structured webpages.",
       "Integrated Google Drive API to auto-save project files, ensuring users' work persisted across sessions.",
@@ -238,12 +347,18 @@ export const projects: Project[] = [
     stackIcons: [
       icons.streamlit, icons.python, icons.html
     ],
+    apis: [],
+    integrations: [],
+    databases: [],
+    tags: ["Python"],
+    teamSize: "Solo",
+    scopeType: "Frontend",
+    recruiterSummary: "I built the user-facing application — the screens, buttons, and calculator interface that employees interact with daily. There was no separate server or database; all the logic runs right in the interface.",
     challenges: [
       "Built a Streamlit UI that handled all calculator logic in Python while rendering clean, HTML-backed components.",
       "Converted hand-computed formulas into reliable programmatic calculations to eliminate user error.",
       "Designed the app to be simple enough for daily use by several employees with no technical background.",
     ],
-
     impact: "Replaced manual production math with a fast, error-proof tool used daily by employees, removing the need to memorize formulas and improving calculation speed.",
     links: {
       private: "Delivered to Client"
