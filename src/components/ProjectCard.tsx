@@ -68,7 +68,7 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project, delay = 0, viewMode = "stack" }: ProjectCardProps) => {
-  const MAX_ICONS = 16;
+  const MAX_ICONS = 18;
 
   const allIcons = useMemo(() => {
     const seen = new Set(project.stackIcons.map((i) => i.name));
@@ -317,10 +317,10 @@ export const ProjectCard = ({ project, delay = 0, viewMode = "stack" }: ProjectC
                   <ul className="space-y-1.5 text-sm text-foreground pt-1">
                     {project.apis.map((api, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className={`mr-2 select-none ${theme.accentText}`}>-</span>
+                        <span className={`mr-2 select-none ${theme.accentText}`}>&#x203A;</span>
                         <span>
                           <span className="font-semibold">{api.name}</span>
-                          <span className="text-muted-foreground"> — {api.purpose}</span>
+                          <span className="text-muted-foreground"> &#x2192; {api.purpose}</span>
                         </span>
                       </li>
                     ))}
@@ -336,10 +336,10 @@ export const ProjectCard = ({ project, delay = 0, viewMode = "stack" }: ProjectC
                   <ul className="space-y-1.5 text-sm text-foreground pt-1">
                     {project.integrations.map((item, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className={`mr-2 select-none ${theme.accentText}`}>-</span>
+                        <span className={`mr-2 select-none ${theme.accentText}`}>&#x203A;</span>
                         <span>
                           <span className="font-semibold">{item.name}</span>
-                          <span className="text-muted-foreground"> — {item.purpose}</span>
+                          <span className="text-muted-foreground"> &#x2192; {item.purpose}</span>
                         </span>
                       </li>
                     ))}

@@ -26,7 +26,7 @@ export type FilterTag =
   // Platforms
   | "AWS" | "Google Cloud" | "Cloudflare" | "Supabase"
   // Languages
-  | "Python" | "JavaScript" | "R"
+  | "Python" | "JavaScript / TypeScript" | "R"
   // Frameworks
   | "React" | "Mobile";
 

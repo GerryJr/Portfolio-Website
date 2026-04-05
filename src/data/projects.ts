@@ -16,7 +16,7 @@ import { icons, apiIcons, dbIcons } from "./icons";
 export const projects: Project[] = [
   {
     id: "clooless-fan-site",
-    title: "Clooless Streamer Tribute Site",
+    title: "Clooless Tracking Website",
     whatItIs: "A fan-built interactive website for the Clooless crew (4.6M+ YouTube subscribers) featuring scroll-driven canvas animations, live Twitch status, and a Cloudflare Workers data layer.",
     employer: "",
     role: "Solo Developer",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     databases: [
       { ...icons.cloudflareWorkersKv, type: "Non-Relational" },
     ],
-    tags: ["JavaScript", "Cloudflare"],
+    tags: ["JavaScript / TypeScript", "Cloudflare"],
     teamSize: "Solo",
     scopeType: "Full Stack",
     recruiterSummary: "I built everything from scratch — the website visitors see, the animations they interact with, and the server that automatically fetches live data from Twitch and YouTube behind the scenes.",
@@ -63,6 +63,7 @@ export const projects: Project[] = [
       { ...apiIcons.stripeApi, purpose: "Handles customer payments and subscriptions" },
       { ...apiIcons.calcom, purpose: "Lets clients book coaching sessions online" },
       { ...apiIcons.brevoApi, purpose: "Sends automated confirmation and receipt emails" },
+      { ...apiIcons.openaiApi, purpose: "Powers LLM-driven features within the app" },
     ],
     integrations: [
       { ...apiIcons.appleHealthKit, purpose: "Syncs workout data from iPhones and Apple Watch" },
@@ -72,13 +73,13 @@ export const projects: Project[] = [
       { ...dbIcons.postgresql, type: "Relational", name: "PostgreSQL (Supabase)" },
       { ...dbIcons.sqlite, type: "Relational" },
     ],
-    tags: ["React", "JavaScript", "Supabase", "Mobile"],
+    tags: ["React", "JavaScript / TypeScript", "Supabase", "Mobile"],
     teamSize: "Solo",
     scopeType: "Full Stack",
     recruiterSummary: "I designed and built the entire product — a marketing website with payment processing, a mobile app for iOS and Android, and the database and server infrastructure connecting everything together.",
     challenges: [
+      "Integrated an OpenAI-powered workout engine in the Expo mobile app that analyzes a client's logged history, fitness level, and external factors to dynamically adjust sets, reps, and intensity using LLM-driven recommendations stored in SQLite and synced to Supabase.",
       "Built a Stripe-powered checkout flow with webhook-driven token delivery, Redis-backed rate limiting, and Brevo transactional emails.",
-      "Developed an offline-first Expo app using SQLite and a custom sync engine to queue workouts and sync with Supabase on reconnect.",
       "Implemented a coach dashboard with plan builder, client check-ins, block library, and real-time messaging via Supabase Realtime.",
       "Integrated Apple HealthKit and Android Health Connect for automatic activity logging and device-synced progress tracking.",
     ],
@@ -105,7 +106,7 @@ export const projects: Project[] = [
     databases: [
       { ...dbIcons.dynamodb, type: "Non-Relational" },
     ],
-    tags: ["AWS", "JavaScript", "React"],
+    tags: ["AWS", "JavaScript / TypeScript", "React"],
     teamSize: "Team",
     scopeType: "Full Stack",
     recruiterSummary: "I built both the user-facing screens teachers interact with and the cloud infrastructure that securely passes student data between Canvas and our application across multiple school districts.",
@@ -137,7 +138,7 @@ export const projects: Project[] = [
     databases: [
       { ...dbIcons.postgresql, type: "Relational", name: "PostgreSQL (Supabase)" },
     ],
-    tags: ["React", "JavaScript", "Supabase", "Mobile"],
+    tags: ["React", "JavaScript / TypeScript", "Supabase", "Mobile"],
     teamSize: "Solo",
     scopeType: "Full Stack",
     recruiterSummary: "I built the complete system from end to end — a web dashboard for managers, a mobile scanning app for warehouse floor staff, the database, user login system, and the automated testing pipeline.",
@@ -161,7 +162,7 @@ export const projects: Project[] = [
     date: "Jul 2024 - May 2025",
     image: projectLLMTester,
     stackIcons: [
-      icons.aws, icons.python, icons.typescript, icons.nodejs, icons.cdk, icons.s3, icons.lambda, icons.bedrock, icons.postman, icons.gateway, icons.cloudwatch, icons.cognito, icons.docker, icons.react, icons.html
+      icons.aws, icons.python, icons.typescript, icons.nodejs, icons.cdk, icons.s3, icons.lambda, icons.postman, icons.gateway, icons.cloudwatch, icons.cognito, icons.docker, icons.react, icons.html
     ],
     apis: [
       { ...apiIcons.openaiApi, purpose: "Sends prompts to OpenAI's ChatGPT models for testing" },
@@ -172,7 +173,7 @@ export const projects: Project[] = [
     databases: [
       { ...dbIcons.dynamodb, type: "Non-Relational" },
     ],
-    tags: ["AWS", "Python", "JavaScript", "React"],
+    tags: ["AWS", "Python", "JavaScript / TypeScript", "React"],
     teamSize: "Solo",
     scopeType: "Full Stack",
     recruiterSummary: "I independently designed and built the entire platform — the interface researchers use to run tests, the cloud servers that process thousands of AI prompts, and the data storage that keeps everything organized.",
@@ -260,7 +261,7 @@ export const projects: Project[] = [
     databases: [
       { ...dbIcons.mongodb, type: "Non-Relational" },
     ],
-    tags: ["Google Cloud", "Python", "JavaScript", "React"],
+    tags: ["Google Cloud", "Python", "JavaScript / TypeScript", "React"],
     teamSize: "Solo",
     scopeType: "Full Stack",
     recruiterSummary: "I built the complete application — the website interface where users view their mortgages, the server that calculates payment projections, and the database that stores everything securely.",

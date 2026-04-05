@@ -5,7 +5,7 @@ const DEMO_PROJECTS = [
     id: "krisp-fresh-living",
     title: "Krisp Fresh Living",
     description:
-      "A pixel-perfect recreation of the Krisp Fresh Living specialty coffee & fresh food website. Features a full ordering flow, interactive menu, cart system, and rewards program.",
+      "A redesigned recreation of the Krisp Fresh Living website, rebuilt from the ground up to use Toast instead of Square. Features a full ordering flow, interactive menu, cart system, and rewards program. Still under construction.",
     image: "/demo/krisp/menu-2023-11-07-7.20.02.webp",
     status: "In Progress",
     tags: ["React", "CSS", "E-Commerce", "Restaurant"],
@@ -28,8 +28,8 @@ export default function Demo() {
           Demo Projects
         </h1>
         <p className="text-muted-foreground text-sm leading-relaxed max-w-lg">
-          Works in progress — recreations and experiments that aren't quite ready
-          for the spotlight. Building in public, one pixel at a time.
+          Works in progress, recreations and experiments that aren't quite ready
+          for the spotlight. Building in public, one commit at a time.
         </p>
       </div>
 

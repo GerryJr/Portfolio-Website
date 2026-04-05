@@ -39,7 +39,8 @@ const allScopes: ScopeType[] = ["Full Stack", "Frontend", "Backend", "Data"];
 
 const allFilterTags: FilterTag[] = [
   "AWS", "Google Cloud", "Cloudflare", "Supabase",
-  "React", "Python", "JavaScript", "R", "Mobile",
+  "Python", "JavaScript / TypeScript", "R",
+  "React", "Mobile",
 ];
 
 /* ── Component ───────────────────────────────────────────────────────── */
@@ -85,12 +86,17 @@ const Projects = () => {
       .map((t) => ({ value: t, label: t, count: countTag(t) }))
       .filter((t) => t.count > 0);
 
-    const tech = (["React", "Python", "JavaScript", "R", "Mobile"] as FilterTag[])
+    const languages = (["Python", "JavaScript / TypeScript", "R"] as FilterTag[])
+      .map((t) => ({ value: t, label: t, count: countTag(t) }))
+      .filter((t) => t.count > 0);
+
+    const tech = (["React", "Mobile"] as FilterTag[])
       .map((t) => ({ value: t, label: t, count: countTag(t) }))
       .filter((t) => t.count > 0);
 
     return [
       { label: "Platform", options: platforms },
+      { label: "Languages", options: languages },
       { label: "Tech", options: tech },
     ];
   }, []);
