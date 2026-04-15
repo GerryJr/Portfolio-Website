@@ -14,40 +14,40 @@ import { icons, apiIcons, dbIcons } from "./icons";
 
 
 export const projects: Project[] = [
-  {
-    id: "clooless-fan-site",
-    title: "Clooless Tracking Website",
-    whatItIs: "A fan-built interactive website for the Clooless crew (4.6M+ YouTube subscribers) featuring scroll-driven canvas animations, live Twitch status, and a Cloudflare Workers data layer.",
-    employer: "",
-    role: "Solo Developer",
-    date: "Mar 2026 - Present",
-    image: projectClooless,
-    stackIcons: [
-      icons.typescript, icons.cloudflare, icons.vitejs, icons.html, icons.css, icons.javascript,
-    ],
-    apis: [
-      { ...apiIcons.twitchApi, purpose: "Shows which streamers are currently live" },
-      { ...apiIcons.youtubeData, name: "YouTube API", purpose: "Fetches video uploads, subscriber counts, and channel statistics" },
-    ],
-    integrations: [],
-    databases: [
-      { ...icons.cloudflareWorkersKv, type: "Non-Relational" },
-    ],
-    tags: ["JavaScript / TypeScript", "Cloudflare"],
-    teamSize: "Solo",
-    scopeType: "Full Stack",
-    recruiterSummary: "I built everything from scratch — the website visitors see, the animations they interact with, and the server that automatically fetches live data from Twitch and YouTube behind the scenes.",
-    challenges: [
-      "Built a scroll-driven storytelling engine that renders frame sequences on canvas with overlay transitions and progress tracking.",
-      "Created a Cloudflare Worker with cron-tiered data fetching for Twitch live status, YouTube RSS, and rolling video stats across 7 channels.",
-      "Designed a multi-page Vite build with per-creator pages, a network stats dashboard, and cross-page view transitions.",
-      "Implemented a manifest-driven site renderer that generates all content sections, stats panels, and YouTube feeds from a single config.",
-    ],
-    impact: "Shipped a polished fan tribute with real-time Twitch and YouTube integration, serving content for creators with a combined 4.6M+ subscribers and 2.1M+ Twitch followers.",
-    links: {
-      live: "https://clooless.dev"
-    },
-  },
+  // {
+  //   id: "clooless-fan-site",
+  //   title: "Clooless Tracking Website",
+  //   whatItIs: "A fan-built interactive website for the Clooless crew (4.6M+ YouTube subscribers) featuring scroll-driven canvas animations, live Twitch status, and a Cloudflare Workers data layer.",
+  //   employer: "",
+  //   role: "Solo Developer",
+  //   date: "Mar 2026 - Present",
+  //   image: projectClooless,
+  //   stackIcons: [
+  //     icons.typescript, icons.cloudflare, icons.vitejs, icons.html, icons.css, icons.javascript,
+  //   ],
+  //   apis: [
+  //     { ...apiIcons.twitchApi, purpose: "Shows which streamers are currently live" },
+  //     { ...apiIcons.youtubeData, name: "YouTube API", purpose: "Fetches video uploads, subscriber counts, and channel statistics" },
+  //   ],
+  //   integrations: [],
+  //   databases: [
+  //     { ...icons.cloudflareWorkersKv, type: "Non-Relational" },
+  //   ],
+  //   tags: ["JavaScript / TypeScript", "Cloudflare"],
+  //   teamSize: "Solo",
+  //   scopeType: "Full Stack",
+  //   recruiterSummary: "I built everything from scratch — the website visitors see, the animations they interact with, and the server that automatically fetches live data from Twitch and YouTube behind the scenes.",
+  //   challenges: [
+  //     "Built a scroll-driven storytelling engine that renders frame sequences on canvas with overlay transitions and progress tracking.",
+  //     "Created a Cloudflare Worker with cron-tiered data fetching for Twitch live status, YouTube RSS, and rolling video stats across 7 channels.",
+  //     "Designed a multi-page Vite build with per-creator pages, a network stats dashboard, and cross-page view transitions.",
+  //     "Implemented a manifest-driven site renderer that generates all content sections, stats panels, and YouTube feeds from a single config.",
+  //   ],
+  //   impact: "Shipped a polished fan tribute with real-time Twitch and YouTube integration, serving content for creators with a combined 4.6M+ subscribers and 2.1M+ Twitch followers.",
+  //   links: {
+  //     live: "https://clooless.dev"
+  //   },
+  // },
   {
     id: "cultivate-fitness",
     title: "Cultivate Fitness (Website + Mobile App)",
