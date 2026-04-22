@@ -181,15 +181,15 @@ export default function Navbar({ onCartOpen, onSearchOpen }: NavbarProps) {
             </button>
 
             <button
-              className="flex lg:hidden items-center justify-center w-11 h-11 cursor-pointer"
+              className="group flex lg:hidden items-center justify-center w-11 h-11 cursor-pointer"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
             >
               <div className="w-4 h-3 relative flex flex-col justify-between">
-                <span className={`block w-full h-px bg-text-primary transition-all duration-200 ease-out origin-center ${mobileOpen ? "rotate-45 translate-y-[5px]" : ""}`} />
-                <span className={`block w-full h-px bg-text-primary transition-opacity duration-200 ease-out ${mobileOpen ? "opacity-0" : ""}`} />
-                <span className={`block w-full h-px bg-text-primary transition-all duration-200 ease-out origin-center ${mobileOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+                <span className={`block w-full h-px bg-text-muted group-hover:bg-text-primary transition-all duration-200 ease-out origin-center ${mobileOpen ? "rotate-45 translate-y-[5.5px]" : ""}`} />
+                <span className={`block w-full h-px bg-text-muted group-hover:bg-text-primary transition-all duration-200 ease-out ${mobileOpen ? "opacity-0" : ""}`} />
+                <span className={`block w-full h-px bg-text-muted group-hover:bg-text-primary transition-all duration-200 ease-out origin-center ${mobileOpen ? "-rotate-45 -translate-y-[5.5px]" : ""}`} />
               </div>
             </button>
           </div>

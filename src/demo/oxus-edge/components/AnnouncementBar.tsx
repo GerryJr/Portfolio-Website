@@ -35,7 +35,7 @@ export default function AnnouncementBar() {
   if ((mode === "live" || mode === "completed") && !activeDrop) return null;
 
   return (
-    <div className="relative bg-ember/10 border-b border-ember/15 text-center px-10 py-2">
+    <div className="relative bg-ember/10 border-b border-ember/15 text-center px-10 py-2 hidden sm:block">
       {mode === "live" && activeDrop && (
         <p className="text-[0.75rem] text-text-primary tracking-wide">
           <span className="inline-flex items-center gap-1.5">
