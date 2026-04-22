@@ -11,6 +11,16 @@ const DEMO_PROJECTS = [
     tags: ["React", "CSS", "E-Commerce", "Restaurant"],
     route: "/demo/krisp-fresh-living",
   },
+  {
+    id: "oxus-edge",
+    title: "Oxus Edge",
+    description:
+      "A full e-commerce storefront for a premium outdoor-brand knife shop. Hero + catalog + filters, dynamic product detail pages, cart drawer, checkout flow, drop-release mechanics, admin dashboard, and a live design-system studio. Ported from Next.js 16 App Router.",
+    image: "/demo/oxus-edge/heroes/outdoor-lights.png",
+    status: "In Progress",
+    tags: ["React", "React Router", "Tailwind", "E-Commerce"],
+    route: "/demo/oxus-edge",
+  },
 ];
 
 export default function Demo() {
@@ -54,8 +64,8 @@ export default function Demo() {
 
               {/* Content */}
               <div className="flex-1 p-6 sm:p-8 flex flex-col justify-center">
-                <div className="flex items-center gap-3 mb-3">
-                  <h2 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
+                <div className="flex items-center gap-3 mb-3 pl-[1px]">
+                  <h2 className="text-lg font-semibold tracking-normal leading-tight text-foreground group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
                   <span className="px-2.5 py-0.5 text-[0.65rem] font-bold tracking-wide uppercase bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full whitespace-nowrap">
