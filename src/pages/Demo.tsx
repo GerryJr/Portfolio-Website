@@ -39,7 +39,7 @@ export default function Demo() {
           <Link
             key={project.id}
             to={project.route}
-            className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-shadow-color/5 hover:-translate-y-0.5"
+            className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <div className="flex flex-col sm:flex-row">
               {/* Image */}
@@ -55,7 +55,7 @@ export default function Demo() {
               {/* Content */}
               <div className="flex-1 p-6 sm:p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-3">
-                  <h2 className="text-lg font-semibold text-foreground group-hover:text-accent-foreground transition-colors">
+                  <h2 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
                   <span className="px-2.5 py-0.5 text-[0.65rem] font-bold tracking-wide uppercase bg-amber-500/10 text-amber-600 dark:text-amber-400 rounded-full whitespace-nowrap">
@@ -78,7 +78,7 @@ export default function Demo() {
                   ))}
                 </div>
 
-                <div className="mt-4 flex items-center gap-1.5 text-[0.75rem] font-semibold tracking-wide uppercase text-muted-foreground group-hover:text-foreground transition-colors">
+                <div className="mt-4 flex items-center gap-1.5 text-[0.75rem] font-semibold tracking-wide uppercase text-muted-foreground group-hover:text-accent transition-colors">
                   <span>View Demo</span>
                   <svg
                     width="14"
