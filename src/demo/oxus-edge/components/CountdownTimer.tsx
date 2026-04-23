@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 interface CountdownTimerProps {
   targetDate: Date;
-  size?: "lg" | "sm";
+  size?: "lg" | "sm" | "inline";
 }
 
 export default function CountdownTimer({ targetDate, size = "lg" }: CountdownTimerProps) {
@@ -19,9 +19,47 @@ export default function CountdownTimer({ targetDate, size = "lg" }: CountdownTim
     return () => clearInterval(interval);
   }, [targetDate]);
 
+  const isExpired = mounted && timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.mins === 0 && timeLeft.secs === 0;
+
+  // Inline variant: single-line "10d 19h 42m" for compact mobile layouts.
+  if (size === "inline") {
+    if (isExpired) {
+      return (
+        <span className="font-display text-[0.82rem] font-semibold text-ember tabular-nums">
+          Live now
+        </span>
+      );
+    }
+    return (
+      <span
+        className="text-[0.82rem] font-semibold tabular-nums text-ember whitespace-nowrap shrink-0"
+        role="timer"
+        aria-live="off"
+        aria-label={mounted ? `${timeLeft.days} days, ${timeLeft.hours} hours, ${timeLeft.mins} minutes until drop` : "Countdown loading"}
+        suppressHydrationWarning
+      >
+        {mounted ? (
+          <>
+            {timeLeft.days > 0 && (
+              <>
+                {timeLeft.days}
+                <span className="text-text-muted font-normal ml-px mr-1">d</span>
+              </>
+            )}
+            {String(timeLeft.hours).padStart(2, "0")}
+            <span className="text-text-muted font-normal ml-px mr-1">h</span>
+            {String(timeLeft.mins).padStart(2, "0")}
+            <span className="text-text-muted font-normal ml-px">m</span>
+          </>
+        ) : (
+          "—"
+        )}
+      </span>
+    );
+  }
+
   const numClass = size === "lg" ? "text-[2rem]" : "text-[1.3rem]";
   const labelText = size === "lg";
-  const isExpired = mounted && timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.mins === 0 && timeLeft.secs === 0;
 
   if (isExpired) {
     return (

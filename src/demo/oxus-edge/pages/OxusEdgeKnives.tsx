@@ -51,8 +51,10 @@ export default function KnivesPage() {
               </p>
             </div>
 
-            {/* Drop timer in hero — reads DropProvider directly */}
-            <KnivesHeroBanner />
+            {/* Drop timer in hero — desktop only; crowds the hero on mobile */}
+            <div className="hidden sm:block">
+              <KnivesHeroBanner />
+            </div>
           </div>
         </div>
       </section>
