@@ -81,7 +81,7 @@ export default function KnifeFilters({ products, families, children }: KnifeFilt
   const selectClasses = "w-full bg-bg-card border border-border text-text-secondary text-[0.78rem] px-3 py-2.5 rounded-[2px] cursor-pointer focus:border-ember focus:outline-none transition-colors duration-200 ease-out appearance-none";
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 items-start">
+    <div className="flex flex-col lg:flex-row gap-8 items-stretch lg:items-start">
       {/* Filters — horizontal on mobile, sidebar on desktop */}
       <aside
         className={`shrink-0 transition-all duration-300 ease-out overflow-hidden ${
@@ -178,8 +178,9 @@ export default function KnifeFilters({ products, families, children }: KnifeFilt
         </div>
       </aside>
 
-      {/* Main content area */}
-      <div className="flex-1 min-w-0">
+      {/* Main content area — w-full mobile-first so it constrains to parent at all widths;
+          lg:flex-1 takes over for grow-to-fill behavior when the filters sidebar is visible */}
+      <div className="w-full min-w-0 lg:flex-1">
         {/* Toolbar — toggle filters + result count */}
         <div className="flex items-center justify-between mb-6">
           <button

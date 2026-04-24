@@ -117,7 +117,10 @@
   display: flex;
   flex-direction: column;
   letter-spacing: calc(0em * (var(--letter-spacing-mult) - 1) + 0em);
-  overflow-x: hidden;
+  /* `clip` instead of `hidden` — clip prevents horizontal overflow like hidden does
+     but does NOT establish a new scrolling containing block, so `position: sticky`
+     on descendants (navbar) continues to stick to the viewport, not to this element. */
+  overflow-x: clip;
 }
 
 /* Reset border-color for Tailwind preflight leak */
@@ -890,3 +893,6 @@
 .oxus-edge .animate-toast-in { animation: oxus-toast-in 0.25s var(--ease-out); }
 .oxus-edge .animate-line-wipe { animation: oxus-line-wipe 0.6s var(--ease-smooth); }
 .oxus-edge .animate-shimmer { animation: oxus-shimmer 2s infinite linear; }
+
+/* Hide webkit scrollbar on chip scrollers (arrow affordance replaces it) */
+.oxus-edge .chip-scroller::-webkit-scrollbar { display: none; }
