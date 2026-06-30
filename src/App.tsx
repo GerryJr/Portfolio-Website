@@ -16,7 +16,6 @@ import NotFound from "./pages/NotFound";
 import Demo from "./pages/Demo";
 
 const KrispApp = lazy(() => import("./demo/krisp-fresh-living/KrispApp"));
-const OxusEdgeApp = lazy(() => import("./demo/oxus-edge/OxusEdgeApp"));
 
 const queryClient = new QueryClient();
 
@@ -31,7 +30,6 @@ const App = () => (
           <Routes>
             {/* Demo routes — outside main Layout */}
             <Route path="/demo/krisp-fresh-living/*" element={<Suspense fallback={null}><KrispApp /></Suspense>} />
-            <Route path="/demo/oxus-edge/*" element={<Suspense fallback={null}><OxusEdgeApp /></Suspense>} />
 
             {/* Main portfolio routes */}
             <Route element={<LayoutWrapper />}>

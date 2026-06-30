@@ -11,16 +11,6 @@ const DEMO_PROJECTS = [
     tags: ["React", "CSS", "E-Commerce", "Restaurant"],
     route: "/demo/krisp-fresh-living",
   },
-  {
-    id: "oxus-edge",
-    title: "Oxus Edge",
-    description:
-      "A full e-commerce storefront for a premium outdoor-brand knife shop. Hero + catalog + filters, dynamic product detail pages, cart drawer, checkout flow, drop-release mechanics, admin dashboard, and a live design-system studio. Ported from Next.js 16 App Router.",
-    image: "/demo/oxus-edge/heroes/outdoor-lights.png",
-    status: "In Progress",
-    tags: ["React", "React Router", "Tailwind", "E-Commerce"],
-    route: "/demo/oxus-edge",
-  },
 ];
 
 export default function Demo() {
