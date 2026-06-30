@@ -4,10 +4,13 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.webp";
 import { homeHighlights } from "@/data/highlights";
+import { Eyebrow } from "@/components/Eyebrow";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const Home = () => {
+  usePageTitle();
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-1 motion-safe:duration-500">
       <div className="flex flex-col items-center text-center space-y-8">
         
         {/* Profile Photo */}
@@ -15,7 +18,7 @@ const Home = () => {
           <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-accent/20 shadow-lg">
             <img
               src={profilePhoto}
-              alt="Gerardo Lopez profile photo"
+              alt="Gerardo Lopez Jr., software engineer"
               className="w-full h-full object-cover"
               width={192}
               height={192}
@@ -24,25 +27,25 @@ const Home = () => {
         </div>
 
         <div className="space-y-6">
-          {/* Slightly Smaller Name */}
-          <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold font-heading leading-tight">
-            Gerardo Lopez
+          <Eyebrow>Software Engineer · Full Stack · Cloud</Eyebrow>
+          <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-[-0.02em] leading-tight">
+            Gerardo Lopez Jr.
           </h1>
 
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Building scalable cloud systems for real-world data.
-            Delivering secure, full-stack solutions from idea to launch.
+            Software engineer building scalable cloud systems for real-world data.
+            Secure, full-stack solutions from idea to launch.
           </p>
 
           {/* === Highlight Strip (with fade + lift animation) === */}
-          <div className="hidden sm:grid grid-cols-3 gap-4 pt-2 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 max-w-4xl mx-auto">
             {homeHighlights.map((item, idx) => (
               <Card
                 key={item.title}
                 style={{ animationDelay: `${idx * 0.12}s` }}
                 className="relative overflow-hidden rounded-md border border-border/70 text-center
-                           bg-card/85 backdrop-blur-sm shadow-[0_10px_28px_rgba(0,0,0,0.05)]
-                           opacity-0 translate-y-2 animate-[fadeInUp_0.5s_ease-out_forwards]"
+                           bg-card/85 backdrop-blur-sm shadow-sm
+                           motion-safe:opacity-0 motion-safe:translate-y-2 motion-safe:animate-[fadeInUp_0.5s_ease-out_forwards]"
               >
                 <CardContent className="p-5 space-y-2.5 flex flex-col items-center justify-center min-h-[140px]">
                   <p className="text-sm font-semibold text-foreground">{item.title}</p>
@@ -58,7 +61,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button
               size="lg"
-              className="group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
+              className="group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               asChild
             >
               <Link to="/projects">
@@ -70,7 +73,7 @@ const Home = () => {
             <Button
               variant="secondary"
               size="lg"
-              className="group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] hover:bg-secondary/90"
+              className="group transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:bg-secondary-hover"
               asChild
             >
               <Link to="/about#contact">

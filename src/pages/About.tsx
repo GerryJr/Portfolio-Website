@@ -4,13 +4,17 @@ import { Card, CardContent } from "@/components/ui/card";
 import { speakingEngagements } from "@/data/speaking";
 import { publications } from "@/data/publications";
 import { aboutData } from "@/data/about";
+import { Eyebrow } from "@/components/Eyebrow";
+import { usePageTitle } from "@/hooks/use-page-title";
 
 const About = () => {
+  usePageTitle("About");
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-1 motion-safe:duration-500">
       {/* Intro with Hero Image */}
       <section className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-8 text-foreground">About Me</h1>
+        <Eyebrow className="mb-3">About</Eyebrow>
+        <h1 className="text-4xl sm:text-5xl font-bold font-heading tracking-[-0.02em] mb-8 text-foreground">About Gerardo Lopez Jr.</h1>
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <div className="flex-shrink-0">
             <img
@@ -33,7 +37,7 @@ const About = () => {
             <Button
               variant="default"
               size="lg"
-              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.15)]"
+              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               asChild
             >
               <a href="https://github.com/gerryjr" target="_blank" rel="noopener noreferrer">
@@ -44,7 +48,7 @@ const About = () => {
             <Button
               variant="secondary"
               size="lg"
-              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] hover:bg-secondary/90"
+              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:bg-secondary-hover"
               asChild
             >
               <a href="https://linkedin.com/in/gerryjr" target="_blank" rel="noopener noreferrer">
@@ -55,7 +59,7 @@ const About = () => {
             <Button
               variant="secondary"
               size="lg"
-              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] hover:bg-secondary/90"
+              className="transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:bg-secondary-hover"
               asChild
             >
               <a href="mailto:gerardolopezjr1178@gmail.com">
@@ -69,10 +73,10 @@ const About = () => {
 
       {/* Public Speaks */}
       <section className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">Public Presentation</h1>
-        <div className="grid md:grid-cols-2 items-start gap-8 mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold font-heading tracking-[-0.01em] mb-8 text-foreground">Public Speaking</h2>
+        <div className="grid md:grid-cols-2 items-start gap-8">
           {speakingEngagements.map((event) => (
-            <Card key={event.id} className="overflow-hidden border border-border transition-colors">
+            <Card key={event.id} className="overflow-hidden border border-border">
               <div className="aspect-video overflow-hidden">
                 <img src={event.image} alt={`Gerardo Lopez at ${event.title}`} className="w-full h-full object-cover" loading="lazy" />
               </div>
@@ -97,7 +101,7 @@ const About = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {event.technologies.map((tech, idx) => (
-                      <span key={idx} className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm">
+                      <span key={idx} className="px-3 py-1 bg-accent/10 text-accent rounded-md text-sm">
                         {tech}
                       </span>
                     ))}
@@ -110,8 +114,8 @@ const About = () => {
       </section>
 
       {/* Publications */}
-      <section>
-        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-12 text-foreground">Publications</h1>
+      <section className="mb-20">
+        <h2 className="text-2xl sm:text-3xl font-bold font-heading tracking-[-0.01em] mb-8 text-foreground">Publications</h2>
         {publications.map((pub) => {
           // Parse markdown-like formatting
           const formattedText = pub.text
@@ -119,15 +123,16 @@ const About = () => {
             .replace(/\*(.*?)\*/g, "<em>$1</em>");
 
           return (
-            <div key={pub.id} className="bg-card border border-border rounded-lg p-8 hover:border-accent transition-colors mb-12">
+            <div key={pub.id} className="bg-card border border-border rounded-lg p-8 mb-6 last:mb-0">
               <p className="text-lg text-foreground leading-relaxed mb-4 font-light" dangerouslySetInnerHTML={{ __html: formattedText }} />
               <a
                 href={pub.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-accent hover:text-accent/80 transition-colors text-lg"
+                aria-label="View publication (opens in a new tab)"
+                className="inline-flex items-center gap-2 px-3 py-2 -ml-3 rounded-md text-base font-medium text-accent hover:text-accent/80 hover:bg-accent/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background motion-safe:transition-colors motion-safe:duration-200"
               >
-                <ExternalLink className="mr-2 h-5 w-5" />
+                <ExternalLink className="h-5 w-5" />
                 View Publication
               </a>
             </div>
@@ -136,10 +141,10 @@ const About = () => {
       </section>
 
       {/* Personal Interests */}
-      <section className="mb-20">
-        <h1 className="text-4xl sm:text-5xl font-bold font-heading mb-8 text-foreground">
+      <section>
+        <h2 className="text-2xl sm:text-3xl font-bold font-heading tracking-[-0.01em] mb-8 text-foreground">
           {aboutData.personalInterests.title}
-        </h1>
+        </h2>
         <div className="flex flex-col md:flex-row items-start gap-8">
           <div className="flex-1 space-y-6">
             {aboutData.personalInterests.paragraphs.map((paragraph, idx) => (

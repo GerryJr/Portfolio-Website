@@ -16,7 +16,7 @@ const buttonVariants = cva(
         outline:
           "border border-input bg-background text-foreground shadow-[0_6px_18px_hsla(var(--shadow-color)_/_0.16)] hover:bg-foreground/10 hover:text-foreground hover:shadow-[0_14px_36px_hsla(var(--shadow-color)_/_0.24)] hover:-translate-y-[0.75px] active:shadow-[0_10px_26px_hsla(var(--shadow-color)_/_0.20)] active:-translate-y-[0.25px]",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-[0_8px_22px_hsla(var(--shadow-color)_/_0.18)] hover:bg-secondary/80 hover:shadow-[0_16px_40px_hsla(var(--shadow-color)_/_0.26)] hover:-translate-y-[0.75px] active:shadow-[0_12px_30px_hsla(var(--shadow-color)_/_0.22)] active:-translate-y-[0.25px]",
+          "bg-secondary text-secondary-foreground shadow-[0_8px_22px_hsla(var(--shadow-color)_/_0.18)] hover:bg-secondary-hover hover:shadow-[0_16px_40px_hsla(var(--shadow-color)_/_0.26)] hover:-translate-y-[0.75px] active:shadow-[0_12px_30px_hsla(var(--shadow-color)_/_0.22)] active:-translate-y-[0.25px]",
         ghost:
           "text-foreground shadow-[0_4px_12px_hsla(var(--shadow-color)_/_0.14)] hover:bg-foreground/10 hover:shadow-[0_12px_28px_hsla(var(--shadow-color)_/_0.22)] hover:-translate-y-[0.5px] active:shadow-[0_8px_18px_hsla(var(--shadow-color)_/_0.18)]",
         link: "text-primary underline-offset-4 hover:underline",

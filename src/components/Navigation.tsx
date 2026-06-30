@@ -33,19 +33,19 @@ export const Navigation = () => {
   const themeLabel = isDark ? "Switch to light mode" : "Switch to dark mode";
 
   const baseLink =
-    "relative inline-flex items-center justify-center whitespace-nowrap text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 no-underline " +
+    "relative inline-flex items-center justify-center whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.12em] font-semibold px-3 py-2 rounded-lg transition-all duration-200 no-underline " +
     "after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-[80%] after:bg-current after:rounded-full " +
     "after:scale-x-0 after:opacity-0 after:origin-center after:transition-transform after:duration-350 after:ease-[cubic-bezier(0.33,1,0.68,1)] after:content-['']";
   const mobileLink =
-    "block w-full text-left text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 no-underline";
+    "block w-full text-left font-mono text-[11px] uppercase tracking-[0.12em] font-semibold px-3 py-2 rounded-lg transition-all duration-200 no-underline";
 
   return (
-    <nav className="bg-background border-b border-border sticky top-0 z-40">
+    <nav className="frosted-nav border-b border-border sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
-          <NavLink to="/" className="font-heading text-xl font-semibold">
-            Gerardo Lopez
+          <NavLink to="/" className="font-heading text-xl font-semibold" aria-label="Gerardo Lopez Jr., home">
+            Gerardo Lopez Jr.
           </NavLink>
 
           {/* Desktop Nav */}
@@ -99,6 +99,7 @@ export const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle navigation"
             aria-expanded={isOpen}
+            aria-controls="mobile-nav-panel"
           >
             <span
               className={cn(
@@ -121,13 +122,18 @@ export const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Nav */}
+        {/* Mobile Nav: grid-rows trick lets the panel grow with content
+            (no max-height clip) and matches the Projects filter drawer pattern. */}
         <div
+          id="mobile-nav-panel"
+          // @ts-expect-error -- React 19 supports inert natively; older types lack it
+          inert={isOpen ? undefined : ""}
           className={cn(
-            "md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out",
-            isOpen ? "max-h-96" : "max-h-0"
+            "md:hidden grid motion-safe:transition-[grid-template-rows,opacity] motion-safe:duration-300 motion-safe:ease-out",
+            isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
           )}
         >
+          <div className="overflow-hidden">
           <div className="py-4 space-y-4">
             {navLinks.map((link) =>
               link.type === "route" ? (
@@ -175,6 +181,7 @@ export const Navigation = () => {
                 {mounted && isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
             </div>
+          </div>
           </div>
         </div>
       </div>
