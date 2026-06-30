@@ -1,7 +1,9 @@
 {
-  "name": "Gerardo Lopez – Software Engineer",
+  "name": "Gerardo Lopez Jr. | Software Engineer",
   "short_name": "Gerardo Lopez Jr.",
+  "description": "Software engineer building full-stack web and mobile applications on AWS, Google Cloud, and Supabase.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",

@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         heading: ['Karla', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         body: ['Karla', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       boxShadow: {
         sm: "0 1px 2px 0 hsla(var(--shadow-color) / 0.10)",
@@ -40,6 +41,7 @@ export default {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          hover: "hsl(var(--secondary-hover))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -71,6 +73,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        live: "hsl(var(--live))",
+        rule: "hsl(var(--rule))",
+        "rule-strong": "hsl(var(--rule-strong))",
+        surface: {
+          DEFAULT: "hsl(var(--background))",
+          raised: "hsl(var(--surface-raised))",
+          sunk: "hsl(var(--surface-sunk))",
+        },
+        scope: {
+          fullstack: "hsl(var(--scope-fs))",
+          frontend: "hsl(var(--scope-fe))",
+          backend: "hsl(var(--scope-be))",
+          data: "hsl(var(--scope-da))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -94,10 +110,20 @@ export default {
             height: "0",
           },
         },
+        "pulse-live": {
+          "0%, 100%": { boxShadow: "0 0 0 0 hsl(var(--live) / 0.5)" },
+          "50%": { boxShadow: "0 0 0 6px hsl(var(--live) / 0)" },
+        },
+        "rise-in": {
+          from: { opacity: "0", transform: "translateY(12px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-live": "pulse-live 2.4s ease-in-out infinite",
+        "rise-in": "rise-in 600ms cubic-bezier(0.33,1,0.68,1) both",
       },
     },
   },

@@ -26,3 +26,26 @@ dist-ssr
 # LaTeX resume build artifacts
 src/data/resume.*
 !src/data/resume.tex
+
+# Archives (demo zips, exports)
+*.zip
+
+# PDFs (resume builds, website exports)
+*.pdf
+
+# LaTeX build artifacts (root-level)
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Design handoffs (reference-only, never committed)
+design_handoff_*/
+
+# OS cruft
+Thumbs.db
+*.tmp
+*.bak
+*~

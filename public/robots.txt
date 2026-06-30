@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /demo
 
 Sitemap: https://gerryjr.dev/sitemap.xml
+Host: gerryjr.dev
