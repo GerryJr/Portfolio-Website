@@ -3,26 +3,15 @@ import logoDLL from "@/assets/logo-dll.png";
 import logoCPLeads from "@/assets/logo-cpleads.png";
 import logoCodeAI from "@/assets/logo-codeai.webp";
 import logoTutor from "@/assets/logo-tutor.webp";
-// import heroDLL from "@/assets/hero-dll.jpg";
-// import heroCPLeads from "@/assets/hero-cpleads.jpg";
-// import heroCodeAI from "@/assets/hero-codeai.jpg";
-// import heroTutor from "@/assets/hero-tutor.jpg";
-
-// Placeholder for images images 
-var heroDLL: any;
-var heroCPLeads: any;
-var heroCodeAI: any;
-var heroTutor: any;
 
 export const workExperience: WorkExperience[] = [
   {
     id: "dll",
     logo: logoDLL,
-    hero: heroDLL,
     title: "Software Engineer",
     company: "Digital Learning Lab",
     location: "Irvine, CA",
-    dateRange: "Jan 2024 – Jan 2026",
+    dateRange: "Jan 2024 → Jan 2026",
     summary: [
       "Connected PapyrusAI to Canvas via secure LTI 1.3 integration used across school districts.",
       "Built an internal RAG + LLM testing tool that scaled AI experiments across dozens of models.",
@@ -67,11 +56,10 @@ export const workExperience: WorkExperience[] = [
   {
     id: "cpleads",
     logo: logoCPLeads,
-    hero: heroCPLeads,
     title: "Data Analyst",
     company: "CP-LEADS",
     location: "Irvine, CA",
-    dateRange: "Jan 2024 – Nov 2024",
+    dateRange: "Jan 2024 → Nov 2024",
     summary: [
       "Analyzed user behavior data to uncover how people engaged with AI-supported tools.",
       "Applied sentiment analysis and topic modeling to thousands of messages to surface key themes.",
@@ -110,11 +98,10 @@ export const workExperience: WorkExperience[] = [
   {
     id: "codeai",
     logo: logoCodeAI,
-    hero: heroCodeAI,
     title: "Software Engineer Intern",
     company: "CodeAI",
     location: "Remote",
-    dateRange: "Jun 2023 – Sep 2023",
+    dateRange: "Jun 2023 → Sep 2023",
     summary: [
       "Created a Python package that generated full HTML sites from notebook-style code.",
       "Integrated Google Drive API to automatically save user projects from Google Colab.",
@@ -152,11 +139,10 @@ export const workExperience: WorkExperience[] = [
   {
     id: "tutor",
     logo: logoTutor,
-    hero: heroTutor,
     title: "Private Python Tutor",
     company: "Independent Contractor",
     location: "Irvine, CA",
-    dateRange: "Nov 2021 – May 2023",
+    dateRange: "Nov 2021 → May 2023",
     summary: [
       "Personalized 1-on-1 Instruction tailored to individual learning styles",
       "Comprehensive Python Curriculum covering fundamentals to advanced topics",
